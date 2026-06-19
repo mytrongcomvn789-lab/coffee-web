@@ -1,4 +1,5 @@
 :root{
+  /* ============ Color tokens (existing) ============ */
   /* #1e4d3a — primary, chart-1 */
   --mau-chinh: #1e4d3a;
 
@@ -22,4 +23,68 @@
 
   /* #ffffff — card */
   --mau-card: #ffffff;
+
+  /* ============ Typography ============ */
+  --font-size: 16px;
+
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+
+  /* Map spec: headings/label/button/input share line-height 1.5 */
+  --line-height-heading: 1.5;
+
+  /* Font families (set in a tokenized way so you can use them in components) */
+  --font-display: "Playfair Display", 400, 600, 700;
+  --font-body: "Be Vietnam Pro";
+  --font-mono: "JetBrains Mono";
+
+  /* If you want actual usable CSS family stacks, keep explicit stacks as well */
+  --font-display-family: "Playfair Display", serif;
+  --font-body-family: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Font-size tokens (spec mapping) */
+  /* h1–h4 uses: var(--text-2xl / --text-xl / --text-lg / --text-base) */
+  /* Theo spec: dùng đơn vị px */
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+
+  /* convenience tokens */
+  --font-heading: var(--font-display-family);
+  --font-body-token: var(--font-body-family);
+
+  /* Apply weights consistently */
+  --heading-font-weight: var(--font-weight-medium);
+
+  /* ============ Border radius ============ */
+  --radius: 0.75rem; /* 12px base */
+  --radius-sm: calc(0.75rem - 4px); /* 8px */
+  --radius-md: calc(0.75rem - 2px); /* 10px */
+  --radius-lg: 0.75rem; /* 12px large */
+  --radius-xl: calc(0.75rem + 4px); /* 16px */
+
+  /* ============ Border ============ */
+  --border: rgba(44, 26, 14, 0.12);
+  --sidebar-border: rgba(255,255,255,0.08);
+
+  /* ============ Input ============ */
+  --input: transparent;
+  --input-background: var(--mau-input);
+  --switch-background: #c4b8a8;
+
+  /* ============ Ring / Focus ============ */
+  --ring: #1e4d3a;
+  --sidebar-ring: #c8973a;
+
+  /* global outline */
+  --outline-ring: color-mix(in srgb, var(--ring) 50%, transparent);
+
+  /* ============ Sidebar ============ */
+  --sidebar: var(--mau-sidebar);
+  --sidebar-foreground: #e8f0eb;
+  --sidebar-primary: #c8973a;
+  --sidebar-accent: #1e4d3a;
 }
+
