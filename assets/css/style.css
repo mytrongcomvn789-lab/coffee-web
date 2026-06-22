@@ -792,7 +792,7 @@ main > section:not(.first-section):not(.stats):not(.second-section) h2 {
    CÂU CHUYỆN CỦA CHÚNG TÔI
    ======================================== */
 .story-section {
-  background-color: #180e08;
+  background-color: #251405 !important;
   padding: 92px 9%;
 }
 
