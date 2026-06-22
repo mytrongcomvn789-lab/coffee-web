@@ -3,32 +3,140 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>YourLife Coffee</title>
   </head>
-  <body>
+  <body id="top">
     <header class="header">
-      <a href="./assets/images/logo.jpg"></a>
+      <a href="#top" target="_self" class="header-brand">
+        <div class="brand-icon">
+          <img src="./assets/images/logo.jpg" alt="YourLife Coffee" />
+        </div>
+        <span class="brand-name">YourLife</span>
+      </a>
       <nav class="navbar">
-        <ul>
-          <li><a href=""></a>Trang chủ</li>
-          <li><a href=""></a>Menu</li>
-          <li><a href=""></a>Khuyến mãi</li>
-          <li><a href=""></a>Liên hệ</li>
+        <ul class="nav">
+          <li class="nav-item"><a href="" class="nav-link">Trang chủ</a></li>
+          <li class="nav-item"><a href="" class="nav-link">Menu</a></li>
+          <li class="nav-item"><a href="" class="nav-link">Khuyến mãi</a></li>
+          <li class="nav-item"><a href="" class="nav-link">Liên hệ</a></li>
         </ul>
       </nav>
       <div class="header-action">
-        <a href="" class="cart"></a>
-        <button class="account"></button>
+        <a href="" class="cart">
+          <i class="icon-cart"></i>
+        </a>
+        <button class="account">
+          <i class="icon-user"></i>
+          <span>Tài khoản</span>
+          <i class="icon-char"></i>
+        </button>
       </div>
     </header>
     <main>
-      <span></span>
-      <section>
-        <h1>Hương vị trà</h1>
-        <p></p>
+      <section class="first-section">
+        <div class="first-overlay">
+          <div class="first-container">
+            <div class="first-badge">
+              <i class="icon-cup"></i>
+              <span>Thương hiệu cà phê top đầu Việt Nam</span>
+            </div>
+            <h1 class="first-title">
+              Hương vị <br />
+              <span>cà phê đích thực</span>
+            </h1>
+            <p class="first-desc">
+              YourLife - mang đến những tách cà phê chất lượng cao cùng không
+              gian thư giãn tuyệt vời.
+            </p>
+            <div class="first-action">
+              <a href="" class="btn-primary">
+                Xem menu <i class="icon-arrow-right"></i>
+              </a>
+              <a href="" class="btn-outline"> Khuyến mãi hôm nay </a>
+            </div>
+          </div>
+        </div>
       </section>
-      <section>
-        <h2>Danh mục nổi bật</h2>
+      <section class="stats">
+        <div class="stat-container">
+          <div class="stat-item">
+            <h3 class="stat-title">Tự hào</h3>
+            <p class="stat-info">Sản phẩm Việt</p>
+          </div>
+          <div class="stat-item">
+            <h3 class="stat-title">100%</h3>
+            <p class="stat-info">Nguyên liệu tự nhiên</p>
+          </div>
+        </div>
+      </section>
+      <section class="second-section">
+        <div class="second-container">
+          <div class="second-header">
+            <h2 class="second-title">Danh mục nổi bật</h2>
+            <p class="second-decs">
+              Khám phá các dòng sản phẩm đặc trưng của YourLife
+            </p>
+          </div>
+          <div class="second-category">
+            <a href="" class="category-card">
+              <img
+                src="./assets/images/cà phê.jpg"
+                alt="Cà phê"
+                class="category-image"
+              />
+              <div class="category-overlay">
+                <div class="category-content">
+                  <span class="category-icon">☕</span>
+                  <h3 class="category-name">Cà phê</h3>
+                  <p class="category-count">4 sản phẩm</p>
+                </div>
+              </div>
+            </a>
+            <a href="" class="category-card">
+              <img
+                src="./assets/images/trà.jpg"
+                alt="Trà"
+                class="category-image"
+              />
+              <div class="category-overlay">
+                <div class="category-content">
+                  <span class="category-icon">🍵</span>
+                  <h3 class="category-name">Trà</h3>
+                  <p class="category-count">4 sản phẩm</p>
+                </div>
+              </div>
+            </a>
+            <a href="" class="category-card">
+              <img
+                src="./assets/images/trà sữa.jpg"
+                alt="Trà sữa"
+                class="category-image"
+              />
+              <div class="category-overlay">
+                <div class="category-content">
+                  <span class="category-icon">🧋</span>
+                  <h3 class="category-name">Trà sữa</h3>
+                  <p class="category-count">4 sản phẩm</p>
+                </div>
+              </div>
+            </a>
+            <a href="" class="category-card">
+              <img
+                src="./assets/images/bánh.jpg"
+                alt="Bánh"
+                class="category-image"
+              />
+              <div class="category-overlay">
+                <div class="category-content">
+                  <span class="category-icon">🥐</span>
+                  <h3 class="category-name">Bánh</h3>
+                  <p class="category-count">4 sản phẩm</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
       </section>
       <section>
         <h2>Sản phẩm bán chạy</h2>
@@ -71,7 +179,7 @@
         <span>Quản trị</span>
       </a>
       <div class="footer-copyright">
-        <p class="copyright">© 2025 YourLife. Tất cả quyền được bảo lưu.</p>
+        <p class="copyright">© 2026 YourLife. Tất cả quyền được bảo lưu.</p>
       </div>
     </footer>
   </body>
