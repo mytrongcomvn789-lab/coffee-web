@@ -356,12 +356,12 @@ img {
 .category-card:hover {
   transform: translateY(-4px);
 }
-main > section:not(.first-section):not(.stats):not(.second-section) {
+main > section:not(.first-section):not(.stats):not(.second-section):not(.menu-hero):not(.menu-layout) {
   padding: 60px 10%;
   background-color: var(--mau-nen);
 }
-main > section:not(.first-section):not(.stats):not(.second-section) h1,
-main > section:not(.first-section):not(.stats):not(.second-section) h2 {
+main > section:not(.first-section):not(.stats):not(.second-section):not(.menu-hero):not(.menu-layout) h1,
+main > section:not(.first-section):not(.stats):not(.second-section):not(.menu-hero):not(.menu-layout) h2 {
   font-family: Georgia, 'Times New Roman', serif;
   color: #251405;
   text-align: center;
@@ -532,21 +532,32 @@ main > section:not(.first-section):not(.stats):not(.second-section) h2 {
    MENU PAGE
    ======================================== */
 
-.menu-hero {
-  padding: 40px 9% 25px;
-  background-color: var(--mau-nen);
-}
-
 .menu-hero-inner {
-  max-width: 1320px;
+  
+  width: calc(100% - 40px);
+  max-width: 1800px;
+    margin: 0 auto;
+    padding: 25px 0 0px;
+    min-height: 0;}
+
+
+/* Tiêu đề */
+.menu-title-group {
+  width: 100%;
+  text-align: center;
+
+}
+.menu-title-group h1 {
+    margin: 0 0 8px;
+    line-height: 1.1;
+}
+.menu-title-group .menu-desc {
+  text-align: center;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
 }
 
-.menu-title-group {
-  margin: 0;
+.menu-title-group p {
+    margin: 0;
 }
 
 .menu-label {
