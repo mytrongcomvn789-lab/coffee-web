@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YourLife Coffee - Menu</title>
+    
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body id="top">
+    <header class="header">
+      <a href="./index.html" target="_self" class="header-brand">
+        <div class="brand-icon">
+          <img src="./assets/images/logo.jpg" alt="YourLife Coffee" />
+        </div>
+        <span class="brand-name">YourLife</span>
+      </a>
+      <nav class="navbar">
+        <ul class="nav">
+          <li class="nav-item"><a href="./index.html" class="nav-link">Trang chủ</a></li>
+          <li class="nav-item"><a href="./Menu.html" class="nav-link active">Menu</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Khuyến mãi</a></li>
+          <li class="nav-item"><a href="./pages/contact.html" class="nav-link">Liên hệ</a></li>
+        </ul>
+      </nav>
+      <div class="header-action">
+        <a href="./index.html" class="cart">
+          <i class="icon-cart"></i>
+        </a>
+        <button class="account">
+          <i class="icon-user"></i>
+          <span>Tài khoản</span>
+          <i class="icon-char"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="menu-hero">
+        <div class="menu-hero-inner">
+          <div class="menu-title-group">
+            
+            <h1 class="menu-heading">Thực đơn</h1>
+            <p class="menu-desc">Khám phá đầy đủ các sản phẩm của Phúc Long</p>
+            <div class="menu-hero-actions">
+              <a href="./index.html" class="btn-primary">Trang chủ</a>
+       
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-layout" id="menu-panel">
+        <aside class="menu-sidebar">
+          <h3>Danh mục</h3>
+          <p>Chọn loại sản phẩm bạn muốn xem.</p>
+          <div class="menu-search">
+            <input id="product-search" type="search" placeholder="Tìm sản phẩm..." />
+            <span class="icon-search">🔎</span>
+          </div>
+        <div class="menu-categories">
+
+    <a href="#" class="menu-category-link active" data-category="all">
+        <span class="menu-category-name">
+            <span class="menu-category-icon">🍃</span>
+            Tất cả
+        </span>
+        <span class="menu-category-count">16</span>
+    </a>
+
+    <a href="#" class="menu-category-link" data-category="cafe">
+        <span class="menu-category-name">
+            <span class="menu-category-icon">☕</span>
+            Cà Phê
+        </span>
+        <span class="menu-category-count">4</span>
+    </a>
+
+    <a href="#" class="menu-category-link" data-category="tra">
+        <span class="menu-category-name">
+            <span class="menu-category-icon">🍵</span>
+            Trà
+        </span>
+        <span class="menu-category-count">4</span>
+    </a>
+
+    <a href="#" class="menu-category-link" data-category="trasua">
+        <span class="menu-category-name">
+            <span class="menu-category-icon">🥤</span>
+            Trà Sữa
+        </span>
+        <span class="menu-category-count">4</span>
+    </a>
+
+    <a href="#" class="menu-category-link" data-category="banh">
+        <span class="menu-category-name">
+            <span class="menu-category-icon">🥐</span>
+            Bánh
+        </span>
+        <span class="menu-category-count">4</span>
+    </a>
+
+</div>
+          </div>
+        </aside>
+
+        <div class="menu-panel">
+          <div class="menu-content-header">
+            <div class="menu-results">Hiển thị 16 sản phẩm</div>
+            <div class="menu-sort">
+              <label for="sort">Sắp xếp theo</label>
+              <select id="sort">
+                <option value="popular">Phổ biến nhất</option>
+                <option value="low-high">Giá thấp đến cao</option>
+                <option value="high-low">Giá cao đến thấp</option>
+                <option value="newest">Mới nhất</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="product-grid">
+            <div class="product-card" data-category="trasua" data-name="Trà Sữa Trân Châu Đen">
+              <div class="product-image-wrap">
+                <img src="./assets/images/menu/trasuatranchauden.avif" alt="Trà Sữa Trân Châu Đen" />
+                <span class="product-badge ban-chay">Bán chạy</span>
+              </div>
+              <div class="product-body">
+                <span class="product-category">Trà Sữa</span>
+                <h3 class="product-name">Trà Sữa Trân Châu Đen</h3>
+                <p class="product-desc">Trà sữa đậm đà cùng trân châu đen dẻo ngon, vị ngọt vừa phải.</p>
+                <div class="product-footer">
+                  <span class="product-price">52.000đ</span>
+                  <button class="btn-add">+ Thêm</button>
+                </div>
+                <p class="product-sold">Đã bán: 2.100</p>
+              </div>
+            </div>
+            <div class="product-card" data-category="trasua" data-name="Trà Sữa Matcha Trân Châu">
+              <div class="product-image-wrap">
+                <img src="./assets/images/menu/trasua.avif" alt="Trà Sữa Matcha Trân Châu" />
+                <span class="product-badge ban-chay">Bán chạy</span>
+              </div>
+              <div class="product-body">
+                <span class="product-category">Trà Sữa</span>
+                <h3 class="product-name">Trà Sữa Matcha Trân Châu</h3>
+                <p class="product-desc">Matcha thơm mát kết hợp sữa tươi và trân châu, vị tươi sang.</p>
+                <div class="product-footer">
+                  <span class="product-price">59.000đ</span>
+                  <button class="btn-add">+ Thêm</button>
+                </div>
+                <p class="product-sold">Đã bán: 1.800</p>
+              </div>
+            </div>
+            <div class="product-card" data-category="trasua" data-name="Trà Sữa Khoai Môn">
+              <div class="product-image-wrap">
+                <img src="./assets/images/menu/truasuakhoaimon.avif" alt="Trà Sữa Khoai Môn" />
+              </div>
+              <div class="product-body">
+                <span class="product-category">Trà Sữa</span>
+                <h3 class="product-name">Trà Sữa Khoai Môn</h3>
+                <p class="product-desc">Khoai môn béo thơm hòa quyện trà sữa mịn mượt, vị quyến rũ.</p>
+                <div class="product-footer">
+                  <span class="product-price">55.000đ</span>
+                  <button class="btn-add">+ Thêm</button>
+                </div>
+                <p class="product-sold">Đã bán: 1.500</p>
+              </div>
+            </div>
+            <div class="product-card" data-category="trasua" data-name="Trà Ô Long Sữa">
+              <div class="product-image-wrap">
+                <img src="./assets/images/menu/trasua.avif" alt="Trà Ô Long Sữa" />
+              </div>
+              <div class="product-body">
+                <span class="product-category">Trà Sữa</span>
+                <h3 class="product-name">Trà Ô Long Sữa</h3>
+                <p class="product-desc">Ô long thượng hạng pha cùng sữa tươi, hậu vị ngọt thanh đặc trưng.</p>
+                <div class="product-footer">
+                  <span class="product-price">49.000đ</span>
+                  <button class="btn-add">+ Thêm</button>
+                </div>
+                <p class="product-sold">Đã bán: 640</p>
+              </div>
+            </div>
+            
+            <div class="product-card" data-category="cafe" data-name="Cà Phê Sữa Đá">
+              <div class="product-image-wrap">
+                <img src="./assets/images/menu/cafesuada.avif" alt="Cà Phê Sữa Đá" />
+                <span class="product-badge ban-chay">Bán chạy</span>
+              </div>
+              <div class="product-body">
+                <span class="product-category">Cà Phê</span>
+                <h3 class="product-name">Cà Phê Sữa Đá</h3>
+                <p class="product-desc">Cà phê phin truyền thống kết hợp sữa đặc thơm ngon, đậm vị Việt.</p>
+                <div class="product-footer">
+                  <span class="product-price">39.000đ</span>
+                  <button class="btn-add">+ Thêm</button>
+                </div>
+                <p class="product-sold">Đã bán: 1.250</p>
+              </div>
+            </div>
+            <div class="product-card" data-category="cafe" data-name="Bạc Xỉu">
+              <div class="product-image-wrap">
+                <img src="./assets/images/menu/bacxiu.avif" alt="Bạc Xỉu" />
+              </div>
+              <div class="product-body">
+                <span class="product-category">Cà Phê</span>
+                <h3 class="product-name">Bạc Xỉu</h3>
+                <p class="product-desc">Lượng sữa nhiều, vị dịu nhẹ, phù hợp thưởng thức khi cần thư giãn.</p>
+                <div class="product-footer">
+                  <span class="product-price">35.000đ</span>
+                  <button class="btn-add">+ Thêm</button>
+                </div>
+                <p class="product-sold">Đã bán: 870</p>
+              </div>
+            </div>
+            <div class="product-card" data-category="cafe" data-name="Espresso Sữa">
+              <div class="product-image-wrap">
+                <img src="./assets/images/menu/cafesuada.avif" alt="Espresso Sữa" />
+              </div>
+              <div class="product-body">
+                <span class="product-category">Cà Phê</span>
+                <h3 class="product-name">Espresso Sữa</h3>
+                <p class="product-desc">Cà phê espresso đậm, hòa quyện cùng sữa tươi mịn màng.</p>
+                <div class="product-footer">
+                  <span class="product-price">42.000đ</span>
+                  <button class="btn-add">+ Thêm</button>
+                </div>
+                <p class="product-sold">Đã bán: 720</p>
+              </div>
+            </div>
+            <div class="product-card" data-category="cafe" data-name="Cappuccino Đặc Biệt">
+              <div class="product-image-wrap">
+                <img src="./assets/images/menu/bacxiu.avif" alt="Cappuccino Đặc Biệt" />
+              </div>
+              <div class="product-body">
+                <span class="product-category">Cà Phê</span>
+                <h3 class="product-name">Cappuccino Đặc Biệt</h3>
+                <p class="product-desc">Bọt sữa mềm mịn hòa cùng espresso đậm, tạo vị cà phê chuẩn Ý.</p>
+                <div class="product-footer">
+                  <span class="product-price">48.000đ</span>
+                  <button class="btn-add">+ Thêm</button>
+                </div>
+                <p class="product-sold">Đã bán: 655</p>
+              </div>
+            </div>
+            <div class="product-card" data-category="tra" data-name="Trà Đào Cam Sả">
+              <div class="product-image-wrap">
+                <img src="./assets/images/menu/tradaocamxa.avif" alt="Trà Đào Cam Sả" />
+                <span class="product-badge moi">Mới</span>
+              </div>
+              <div class="product-body">
+                <span class="product-category">Trà</span>
+                <h3 class="product-name">Trà Đào Cam Sả</h3>
+                <p class="product-desc">Hương đào tươi cùng cam và sả tạo thức uống mát lạnh, thanh khiết.</p>
+                <div class="product-footer">
+                  <span class="product-price">45.000đ</span>
+                  <button class="btn-add">+ Thêm</button>
+                </div>
+                <p class="product-sold">Đã bán: 980</p>
+              </div>
+            </div>
+            <div class="product-card" data-category="tra" data-name="Trà Xanh Chanh">
+              <div class="product-image-wrap">
+                <img src="./assets/images/trà.jpg" alt="Trà Xanh Chanh" />
+              </div>
+              <div class="product-body">
+                <span class="product-category">Trà</span>
+                <h3 class="product-name">Trà Xanh Chanh</h3>
+                <p class="product-desc">Trà xanh thanh mát kết hợp chanh tươi, giải nhiệt sảng khoái.</p>
+                <div class="product-footer">
+                  <span class="product-price">40.000đ</span>
+                  <button class="btn-add">+ Thêm</button>
+                </div>
+                <p class="product-sold">Đã bán: 840</p>
+              </div>
+            </div>
+            <div class="product-card" data-category="tra" data-name="Trà Hoa Nhài">
+              <div class="product-image-wrap">
+                <img src="./assets/images/trà.jpg" alt="Trà Hoa Nhài" />
+              </div>
+              <div class="product-body">
+                <span class="product-category">Trà</span>
+                <h3 class="product-name">Trà Hoa Nhài</h3>
+                <p class="product-desc">Thức uống tinh tế với hương hoa nhài dịu nhẹ, thư thái ngày dài.</p>
+                <div class="product-footer">
+                  <span class="product-price">42.000đ</span>
+                  <button class="btn-add">+ Thêm</button>
+                </div>
+                <p class="product-sold">Đã bán: 710</p>
+              </div>
+            </div>
+            <div class="product-card" data-category="tra" data-name="Trà Sen Tinh Khiết">
+              <div class="product-image-wrap">
+                <img src="./assets/images/trà.jpg" alt="Trà Sen Tinh Khiết" />
+              </div>
+              <div class="product-body">
+                <span class="product-category">Trà</span>
+                <h3 class="product-name">Trà Sen Tinh Khiết</h3>
+                <p class="product-desc">Hòa quyện trà tinh khiết với hương sen thơm, thanh mát dịu dàng.</p>
+                <div class="product-footer">
+                  <span class="product-price">46.000đ</span>
+                  <button class="btn-add">+ Thêm</button>
+                </div>
+                <p class="product-sold">Đã bán: 690</p>
+              </div>
+            </div>
+            <div class="product-card" data-category="banh" data-name="Bánh Croissant">
+              <div class="product-image-wrap">
+                <img src="./assets/images/bánh.jpg" alt="Bánh Croissant" />
+              </div>
+              <div class="product-body">
+                <span class="product-category">Bánh</span>
+                <h3 class="product-name">Bánh Croissant</h3>
+                <p class="product-desc">Bánh croissant xốp vàng, bơ thơm ngậy, phù hợp dùng cùng cà phê.</p>
+                <div class="product-footer">
+                  <span class="product-price">39.000đ</span>
+                  <button class="btn-add">+ Thêm</button>
+                </div>
+                <p class="product-sold">Đã bán: 530</p>
+              </div>
+            </div>
+            <div class="product-card" data-category="banh" data-name="Bánh Muffin Socola">
+              <div class="product-image-wrap">
+                <img src="./assets/images/bánh.jpg" alt="Bánh Muffin Socola" />
+              </div>
+              <div class="product-body">
+                <span class="product-category">Bánh</span>
+                <h3 class="product-name">Bánh Muffin Socola</h3>
+                <p class="product-desc">Muffin mềm mịn, nhân socola đậm đà, thích hợp cho buổi chiều nhẹ nhàng.</p>
+                <div class="product-footer">
+                  <span class="product-price">45.000đ</span>
+                  <button class="btn-add">+ Thêm</button>
+                </div>
+                <p class="product-sold">Đã bán: 620</p>
+              </div>
+            </div>
+            <div class="product-card" data-category="banh" data-name="Bánh Tart Trái Cây">
+              <div class="product-image-wrap">
+                <img src="./assets/images/bánh.jpg" alt="Bánh Tart Trái Cây" />
+              </div>
+              <div class="product-body">
+                <span class="product-category">Bánh</span>
+                <h3 class="product-name">Bánh Tart Trái Cây</h3>
+                <p class="product-desc">Tart giòn xốp, nhân kem mềm và trái cây tươi tắn.</p>
+                <div class="product-footer">
+                  <span class="product-price">49.000đ</span>
+                  <button class="btn-add">+ Thêm</button>
+                </div>
+                <p class="product-sold">Đã bán: 580</p>
+              </div>
+            </div>
+            <div class="product-card" data-category="banh" data-name="Bánh Cheese Cake">
+              <div class="product-image-wrap">
+                <img src="./assets/images/bánh.jpg" alt="Bánh Cheese Cake" />
+              </div>
+              <div class="product-body">
+                <span class="product-category">Bánh</span>
+                <h3 class="product-name">Bánh Cheese Cake</h3>
+                <p class="product-desc">Cheese cake mịn màng, thơm vị phô mai, dịu nhẹ và béo ngậy.</p>
+                <div class="product-footer">
+                  <span class="product-price">52.000đ</span>
+                  <button class="btn-add">+ Thêm</button>
+                </div>
+                <p class="product-sold">Đã bán: 640</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <div class="footer-brand-icon">
+            <img src="./assets/images/logo.jpg" alt="YourLife" />
+          </div>
+          <span class="footer-brand-name">YourLife</span>
+        </div>
+        <p class="footer-tagline">
+          Mang đến hương vị cà phê & trà chất lượng cao nhất Việt Nam.
+        </p>
+      </div>
+      <div class="footer-link">
+        <h3 class="footer-heading">Liên kết nhanh</h3>
+        <ul>
+          <li><a href="./index.html">Trang chủ</a></li>
+          <li><a href="./Menu.html">Menu</a></li>
+          <li><a href="#">Khuyến mãi</a></li>
+          <li><a href="./pages/contact.html">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div class="footer-link">
+        <h3 class="footer-heading">Thông tin cửa hàng</h3>
+        <div class="footer-info-list">
+          <div class="footer-info-item">
+            <span class="fi-icon">📍</span>
+            <span>123 Nguyễn Huệ, Q.1, TP.HCM</span>
+          </div>
+          <div class="footer-info-item">
+            <span class="fi-icon">📞</span>
+            <span>1800 6996</span>
+          </div>
+          <div class="footer-info-item">
+            <span class="fi-icon">✉️</span>
+            <span>info@yourlife.com.vn</span>
+          </div>
+          <div class="footer-info-item">
+            <span class="fi-icon">⏰</span>
+            <span>07:00 – 22:00 hằng ngày</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer-heading">Kết nối với chúng tôi</h3>
+        <div class="footer-social">
+          <a class="social-btn" href="#">Facebook</a>
+          <a class="social-btn" href="#">Zalo</a>
+          <a class="social-btn" href="#">Instagram</a>
+        </div>
+        <p class="footer-contact-desc">
+          Theo dõi YourLife để nhận thông tin khuyến mãi và sản phẩm mới nhất.
+        </p>
+        <a href="#" class="footer-admin">Trang quản trị</a>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 YourLife. Tất cả quyền được bảo lưu.</p>
+      </div>
+    </footer>
+    
+    <script>
+      const categoryLinks = document.querySelectorAll('.menu-category-link');
+      const productGrid = document.querySelector('.product-grid');
+      const productCards = Array.from(document.querySelectorAll('.product-card'));
+      const resultsText = document.querySelector('.menu-results');
+      const searchInput = document.getElementById('product-search');
+      const sortSelect = document.getElementById('sort');
+      let currentCategory = 'all';
+      let currentQuery = '';
+      let currentSort = 'popular';
+      const originalOrder = productCards.slice();
+
+      function parsePrice(card) {
+        const priceText = card.querySelector('.product-price')?.textContent || '';
+        return Number(priceText.replace(/[^0-9]/g, '')) || 0;
+      }
+
+      function sortVisibleCards(visibleCards, sortType) {
+        const sortedCards = visibleCards.slice();
+        if (sortType === 'low-high') {
+          sortedCards.sort((a, b) => parsePrice(a) - parsePrice(b));
+        } else if (sortType === 'high-low') {
+          sortedCards.sort((a, b) => parsePrice(b) - parsePrice(a));
+        } else if (sortType === 'newest') {
+          sortedCards.sort((a, b) => originalOrder.indexOf(a) - originalOrder.indexOf(b));
+        }
+        sortedCards.forEach(card => productGrid.appendChild(card));
+      }
+
+      function updateProducts() {
+        const normalizedQuery = currentQuery.trim().toLowerCase();
+        const visibleCards = [];
+        productCards.forEach(card => {
+          const cardCategory = card.dataset.category;
+          const cardName = card.dataset.name.toLowerCase();
+          const matchesCategory = currentCategory === 'all' || cardCategory === currentCategory;
+          const matchesSearch = !normalizedQuery || cardName.includes(normalizedQuery);
+          const shouldShow = matchesCategory && matchesSearch;
+          card.style.display = shouldShow ? '' : 'none';
+          if (shouldShow) visibleCards.push(card);
+        });
+        resultsText.textContent = `Hiển thị ${visibleCards.length} sản phẩm`;
+        sortVisibleCards(visibleCards, currentSort);
+      }
+
+      categoryLinks.forEach(link => {
+        link.addEventListener('click', event => {
+          event.preventDefault();
+          categoryLinks.forEach(item => item.classList.remove('active'));
+          link.classList.add('active');
+          currentCategory = link.dataset.category;
+          updateProducts();
+        });
+      });
+
+      searchInput.addEventListener('input', () => {
+        currentQuery = searchInput.value;
+        updateProducts();
+      });
+
+      sortSelect.addEventListener('change', () => {
+        currentSort = sortSelect.value;
+        updateProducts();
+      });
+
+      updateProducts();
+    </script>
+  </body>
+</html>
