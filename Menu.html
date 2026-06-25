@@ -24,8 +24,9 @@
         </ul>
       </nav>
       <div class="header-action">
-        <a href="./index.html" class="cart">
+        <a href="#" class="cart" id="cartToggle">
           <i class="icon-cart"></i>
+          <span class="cart-count hidden" id="cartCount">0</span>
         </a>
         <button class="account">
           <i class="icon-user"></i>
@@ -34,6 +35,30 @@
         </button>
       </div>
     </header>
+
+    <div class="cart-drawer" id="cartDrawer" aria-hidden="true">
+      <div class="cart-drawer-backdrop" id="cartBackdrop"></div>
+      <div class="cart-drawer-panel">
+        <div class="cart-drawer-header">
+          <h2>Giỏ hàng</h2>
+          <button type="button" class="cart-close" id="cartClose">×</button>
+        </div>
+        <div class="cart-drawer-content">
+          <div class="cart-empty" id="cartEmpty">
+            <p>Giỏ hàng của bạn đang trống.</p>
+            <a href="#menu-panel" class="btn-primary cart-empty-btn">Xem menu</a>
+          </div>
+          <div class="cart-items hidden" id="cartItems"></div>
+        </div>
+        <div class="cart-drawer-footer hidden" id="cartFooter">
+          <div class="cart-summary">
+            <span>Tổng</span>
+            <strong id="cartTotal">0đ</strong>
+          </div>
+          <button type="button" class="btn-primary" id="checkoutBtn">Thanh toán</button>
+        </div>
+      </div>
+    </div>
 
     <main>
       <section class="menu-hero">
@@ -493,6 +518,168 @@
         updateProducts();
       });
 
+      const cartToggle = document.getElementById('cartToggle');
+      const cartDrawer = document.getElementById('cartDrawer');
+      const cartBackdrop = document.getElementById('cartBackdrop');
+      const cartClose = document.getElementById('cartClose');
+      const cartCountElem = document.getElementById('cartCount');
+      const cartItemsWrapper = document.getElementById('cartItems');
+      const cartFooter = document.getElementById('cartFooter');
+      const cartEmpty = document.getElementById('cartEmpty');
+      const cartTotalElem = document.getElementById('cartTotal');
+      const checkoutBtn = document.getElementById('checkoutBtn');
+      let cartItems = JSON.parse(localStorage.getItem('coffeeCart') || '[]');
+
+      function formatCurrency(value) {
+        return value.toLocaleString('vi-VN') + 'đ';
+      }
+
+      function saveCart() {
+        localStorage.setItem('coffeeCart', JSON.stringify(cartItems));
+      }
+
+      function updateCartCount() {
+        const totalQty = cartItems.reduce((count, item) => count + item.quantity, 0);
+        cartCountElem.textContent = totalQty;
+        if (totalQty > 0) {
+          cartCountElem.classList.remove('hidden');
+        } else {
+          cartCountElem.classList.add('hidden');
+        }
+      }
+
+      function renderCart() {
+        if (!cartItems.length) {
+          cartEmpty.classList.remove('hidden');
+          cartItemsWrapper.classList.add('hidden');
+          cartFooter.classList.add('hidden');
+          cartItemsWrapper.innerHTML = '';
+          cartTotalElem.textContent = '0đ';
+          return;
+        }
+
+        cartEmpty.classList.add('hidden');
+        cartItemsWrapper.classList.remove('hidden');
+        cartFooter.classList.remove('hidden');
+        cartItemsWrapper.innerHTML = '';
+
+        cartItems.forEach(item => {
+          const itemRow = document.createElement('div');
+          itemRow.className = 'cart-item';
+          itemRow.innerHTML = `
+            <div class="cart-item-details">
+              <img src="${item.image}" alt="${item.name}" />
+              <div>
+                <h4>${item.name}</h4>
+                <p>${formatCurrency(item.price)}</p>
+              </div>
+            </div>
+            <div class="cart-item-actions">
+              <div class="cart-qty-controls" data-name="${item.name}">
+                <button type="button" class="cart-qty-btn cart-qty-decrease" aria-label="Giảm số lượng">-</button>
+                <span class="cart-qty-value">${item.quantity}</span>
+                <button type="button" class="cart-qty-btn cart-qty-increase" aria-label="Tăng số lượng">+</button>
+              </div>
+              <button type="button" class="cart-remove" data-name="${item.name}">Xóa</button>
+            </div>
+          `;
+
+          const decreaseButton = itemRow.querySelector('.cart-qty-decrease');
+          const increaseButton = itemRow.querySelector('.cart-qty-increase');
+          const removeButton = itemRow.querySelector('.cart-remove');
+
+          decreaseButton.addEventListener('click', () => {
+            const found = cartItems.find(cartItem => cartItem.name === item.name);
+            if (!found) return;
+            if (found.quantity > 1) {
+              found.quantity -= 1;
+            } else {
+              cartItems = cartItems.filter(cartItem => cartItem.name !== item.name);
+            }
+            saveCart();
+            updateCartCount();
+            renderCart();
+          });
+
+          increaseButton.addEventListener('click', () => {
+            const found = cartItems.find(cartItem => cartItem.name === item.name);
+            if (!found) return;
+            found.quantity += 1;
+            saveCart();
+            updateCartCount();
+            renderCart();
+          });
+
+          removeButton.addEventListener('click', () => {
+            cartItems = cartItems.filter(cartItem => cartItem.name !== item.name);
+            saveCart();
+            updateCartCount();
+            renderCart();
+          });
+          cartItemsWrapper.appendChild(itemRow);
+        });
+
+        const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+        cartTotalElem.textContent = formatCurrency(total);
+      }
+
+      function openCart() {
+        cartDrawer.classList.add('open');
+        cartDrawer.setAttribute('aria-hidden', 'false');
+      }
+
+      function closeCart() {
+        cartDrawer.classList.remove('open');
+        cartDrawer.setAttribute('aria-hidden', 'true');
+      }
+
+      function addProductToCart(card) {
+        const name = card.dataset.name;
+        const price = parsePrice(card);
+        const image = card.querySelector('img')?.src || '';
+        const existingItem = cartItems.find(item => item.name === name);
+
+        if (existingItem) {
+          existingItem.quantity += 1;
+        } else {
+          cartItems.push({ name, price, quantity: 1, image });
+        }
+
+        saveCart();
+        updateCartCount();
+        renderCart();
+        openCart();
+      }
+
+      document.querySelectorAll('.btn-add').forEach(button => {
+        button.addEventListener('click', () => {
+          const card = button.closest('.product-card');
+          if (card) {
+            addProductToCart(card);
+          }
+        });
+      });
+
+      cartToggle.addEventListener('click', event => {
+        event.preventDefault();
+        openCart();
+      });
+      cartBackdrop.addEventListener('click', closeCart);
+      cartClose.addEventListener('click', closeCart);
+      checkoutBtn.addEventListener('click', () => {
+        if (!cartItems.length) {
+          return;
+        }
+        alert('Cảm ơn bạn đã đặt hàng!');
+        cartItems = [];
+        saveCart();
+        updateCartCount();
+        renderCart();
+        closeCart();
+      });
+
+      updateCartCount();
+      renderCart();
       updateProducts();
     </script>
   <script src="./assets/js/account-dropdown.js"></script>
