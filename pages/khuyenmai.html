@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/override.css" />
+    <link rel="stylesheet" href="../assets/css/pages.css" />
+    <title>Khuyến mãi – YourLife Coffee</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <a href="../index.html" class="header-brand">
+        <div class="brand-icon">
+          <img src="../assets/images/logo.jpg" alt="YourLife Coffee" />
+        </div>
+        <span class="brand-name">YourLife</span>
+      </a>
+      <nav class="navbar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a href="../Menu.html#menu" class="nav-link">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a href="./khuyenmai.html" class="nav-link active">Khuyến mãi</a>
+          </li>
+          <li class="nav-item">
+            <a href="./lienhe.html" class="nav-link">Liên hệ</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-action">
+        <a href="#" class="cart"><i class="icon-cart"></i></a>
+        <button class="account">
+          <i class="icon-user"></i><span>Tài khoản</span
+          ><i class="icon-char"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- PAGE HERO -->
+      <section
+        class="page-hero"
+        style="
+          background-image: linear-gradient(
+            135deg,
+            #0b291d 0%,
+            #1e4d3a 60%,
+            #2a6349 100%
+          );
+        "
+      >
+        <div class="page-hero-content">
+          <p class="page-hero-label">YourLife Coffee</p>
+          <h1 class="page-hero-title">Tin tức &amp; Khuyến mãi</h1>
+          <p class="page-hero-desc">
+            Cập nhật những ưu đãi hấp dẫn và tin tức mới nhất từ YourLife
+          </p>
+        </div>
+      </section>
+
+      <!-- PROMO BANNER 2 CỘT -->
+      <section class="promo-section">
+        <div class="promo-container">
+          <div class="promo-card green">
+            <img
+              src="../assets/images/khuyenmai/cafe_.avif"
+              alt="Trà"
+              class="promo-bg"
+            />
+            <div class="promo-overlay"></div>
+            <div class="promo-content">
+              <p class="promo-tag">Chỉ hôm nay</p>
+              <h3 class="promo-title">Mua 2 Cà Phê<br />Tặng 1 Miễn Phí</h3>
+              <a href="#" class="btn-promo-primary">Đặt ngay</a>
+            </div>
+          </div>
+          <div class="promo-card brown">
+            <img
+              src="../assets/images/khuyenmai/cafe1.avif"
+              alt="Cà phê"
+              class="promo-bg"
+            />
+            <div class="promo-overlay"></div>
+            <div class="promo-content">
+              <p class="promo-tag">Ưu đãi mùa hè</p>
+              <h3 class="promo-title">Giảm 30% Trà Sữa<br />Khi Đặt Online</h3>
+              <a href="#" class="btn-promo-outline">Xem ưu đãi</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DANH SÁCH TIN TỨC / KHUYẾN MÃI -->
+      <section class="news-section">
+        <div class="news-container">
+          <div class="news-header">
+            <h2 class="news-title">Tất cả tin tức</h2>
+            <div class="news-filter">
+              <button class="filter-btn active" data-filter="all">
+                Tất cả
+              </button>
+              <button class="filter-btn" data-filter="khuyen-mai">
+                Khuyến mãi
+              </button>
+              <button class="filter-btn" data-filter="tin-tuc">Tin tức</button>
+              <button class="filter-btn" data-filter="san-pham-moi">
+                Sản phẩm mới
+              </button>
+              <button class="filter-btn" data-filter="thanh-vien">
+                Thành viên
+              </button>
+            </div>
+          </div>
+
+          <!-- Featured 2 col -->
+          <div class="news-featured">
+            <article class="news-card featured" data-tag="tin-tuc">
+              <div class="news-card-img">
+                <img
+                  src="../assets/images/khuyenmai/cafe_.avif"
+                  alt="Khai trương chi nhánh mới"
+                />
+              </div>
+              <div class="news-card-body">
+                <div class="news-meta">
+                  <span class="news-tag tag-tin-tuc">Tin tức</span>
+                  <span class="news-date">15/06/2026</span>
+                </div>
+                <h3 class="news-card-title">
+                  YourLife khai trương chi nhánh mới tại Hà Nội
+                </h3>
+                <p class="news-card-excerpt">
+                  Chúng tôi vui mừng thông báo khai trương chi nhánh thứ 50 tại
+                  125 Cầu Giấy, Hà Nội vào ngày 20/06/2026 với nhiều ưu đãi đặc
+                  biệt dành cho khách hàng đến sớm.
+                </p>
+              </div>
+            </article>
+            <article class="news-card featured" data-tag="khuyen-mai">
+              <div class="news-card-img">
+                <img
+                  src="../assets/images/khuyenmai/trada.avif"
+                  alt="Giảm 30% trà đá"
+                />
+              </div>
+              <div class="news-card-body">
+                <div class="news-meta">
+                  <span class="news-tag tag-khuyen-mai">Khuyến mãi</span>
+                  <span class="news-date">01/06/2026</span>
+                </div>
+                <h3 class="news-card-title">
+                  Ưu đãi mùa hè – Giảm 30% toàn bộ trà đá
+                </h3>
+                <p class="news-card-excerpt">
+                  Từ 01/06 đến 30/06/2026, tất cả sản phẩm trà đá giảm ngay 30%
+                  khi đặt hàng online qua ứng dụng. Áp dụng không giới hạn số
+                  lần đặt.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Grid 3 col -->
+          <div class="news-grid">
+            <article class="news-card" data-tag="san-pham-moi">
+              <div class="news-card-img">
+                <img
+                  src="../assets/images/khuyenmai/phacaphe.avif"
+                  alt="Trà sữa mới"
+                />
+              </div>
+              <div class="news-card-body">
+                <div class="news-meta">
+                  <span class="news-tag tag-san-pham-moi">Sản phẩm mới</span>
+                  <span class="news-date">20/05/2026</span>
+                </div>
+                <h3 class="news-card-title">
+                  Bộ sưu tập trà sữa hương vị mới nhất 2026
+                </h3>
+                <p class="news-card-excerpt">
+                  YourLife ra mắt 4 hương vị trà sữa mới: Hồng trà mật ong, Bạc
+                  hà xanh, Đào hồng, Dưa gang thơm.
+                </p>
+              </div>
+            </article>
+            <article class="news-card" data-tag="thanh-vien">
+              <div class="news-card-img">
+                <img
+                  src="../assets/images/khuyenmai/images.jpg"
+                  alt="Chương trình thành viên"
+                />
+              </div>
+              <div class="news-card-body">
+                <div class="news-meta">
+                  <span class="news-tag tag-thanh-vien">Thành viên</span>
+                  <span class="news-date">10/05/2026</span>
+                </div>
+                <h3 class="news-card-title">
+                  Chương trình thành viên YourLife 2026
+                </h3>
+                <p class="news-card-excerpt">
+                  Tích điểm đổi quà với thẻ thành viên YourLife. Tích lũy ngay
+                  để nhận ưu đãi hấp dẫn mỗi tháng.
+                </p>
+              </div>
+            </article>
+            <article class="news-card" data-tag="khuyen-mai">
+              <div class="news-card-img">
+                <img
+                  src="../assets/images/khuyenmai/cafe1.avif"
+                  alt="Mua 2 tặng 1"
+                />
+              </div>
+              <div class="news-card-body">
+                <div class="news-meta">
+                  <span class="news-tag tag-khuyen-mai">Khuyến mãi</span>
+                  <span class="news-date">05/05/2026</span>
+                </div>
+                <h3 class="news-card-title">
+                  Mua 2 tặng 1 – Áp dụng toàn bộ cà phê
+                </h3>
+                <p class="news-card-excerpt">
+                  Mỗi thứ 6 hàng tuần, mua 2 ly cà phê bất kỳ sẽ được tặng thêm
+                  1 ly cùng loại. Không giới hạn số lần áp dụng.
+                </p>
+              </div>
+            </article>
+            <article class="news-card" data-tag="tin-tuc">
+              <div class="news-card-img">
+                <img
+                  src="../assets/images/khuyenmai/trada1.avif"
+                  alt="Hợp tác"
+                />
+              </div>
+              <div class="news-card-body">
+                <div class="news-meta">
+                  <span class="news-tag tag-tin-tuc">Tin tức</span>
+                  <span class="news-date">28/04/2026</span>
+                </div>
+                <h3 class="news-card-title">
+                  Hợp tác chiến lược với thương hiệu trà Đài Loan
+                </h3>
+                <p class="news-card-excerpt">
+                  YourLife vừa ký kết hợp tác với thương hiệu trà nổi tiếng từ
+                  Đài Loan để nâng cao chất lượng nguyên liệu.
+                </p>
+              </div>
+            </article>
+            <article class="news-card" data-tag="khuyen-mai">
+              <div class="news-card-img">
+                <img
+                  src="../assets/images/khuyenmai/ruu.avif"
+                  alt="Sinh nhật"
+                />
+              </div>
+              <div class="news-card-body">
+                <div class="news-meta">
+                  <span class="news-tag tag-khuyen-mai">Khuyến mãi</span>
+                  <span class="news-date">15/04/2026</span>
+                </div>
+                <h3 class="news-card-title">
+                  Ưu đãi sinh nhật – Miễn phí 1 ly trong ngày sinh
+                </h3>
+                <p class="news-card-excerpt">
+                  Đăng ký thành viên và nhận ngay 1 ly đồ uống miễn phí trong
+                  ngày sinh nhật của bạn tại tất cả chi nhánh YourLife.
+                </p>
+              </div>
+            </article>
+            <article class="news-card" data-tag="san-pham-moi">
+              <div class="news-card-img">
+                <img
+                  src="../assets/images/menu/cafesuada.avif"
+                  alt="Cold brew"
+                />
+              </div>
+              <div class="news-card-body">
+                <div class="news-meta">
+                  <span class="news-tag tag-san-pham-moi">Sản phẩm mới</span>
+                  <span class="news-date">01/04/2026</span>
+                </div>
+                <h3 class="news-card-title">
+                  Cold Brew mới – Ủ lạnh 12 giờ cho vị đắng hoàn hảo
+                </h3>
+                <p class="news-card-excerpt">
+                  Cold Brew đặc biệt được ủ lạnh 12 giờ từ hạt Robusta cao
+                  nguyên, mang lại hương vị đắng nhẹ và mát lạnh.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section">
+        <div class="cta-container">
+          <h2 class="cta-title">Nhận ưu đãi mới nhất qua email</h2>
+          <p class="cta-desc">
+            Đăng ký ngay để không bỏ lỡ bất kỳ chương trình khuyến mãi nào từ
+            YourLife Coffee.
+          </p>
+          <form class="cta-form" onsubmit="handleSubscribe(event)">
+            <input
+              type="email"
+              class="cta-input"
+              placeholder="Nhập địa chỉ email của bạn..."
+              required
+            />
+            <button type="submit" class="cta-btn">Đăng ký</button>
+          </form>
+          <p class="cta-note" id="cta-success" style="display: none">
+            ✅ Đăng ký thành công! Cảm ơn bạn đã quan tâm.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <div class="footer-brand-icon">
+            <img src="../assets/images/logo.jpg" alt="YourLife" />
+          </div>
+          <span class="footer-brand-name">YourLife</span>
+        </div>
+        <p class="footer-tagline">
+          Mang đến hương vị cà phê &amp; trà chất lượng cao nhất Việt Nam.
+        </p>
+      </div>
+      <div class="footer-link">
+        <h3 class="footer-heading">Liên kết nhanh</h3>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Trang chủ</a></li>
+            <li><a href="../index.html#menu">Menu</a></li>
+            <li><a href="./khuyenmai.html">Khuyến mãi</a></li>
+            <li><a href="./contact.html">Liên hệ</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-info">
+        <h3 class="footer-heading">Thông tin cửa hàng</h3>
+        <div class="footer-info-list">
+          <div class="footer-info-item">
+            <span class="fi-icon">📍</span
+            ><span>123 Nguyễn Huệ, Q.1, TP.HCM</span>
+          </div>
+          <div class="footer-info-item">
+            <span class="fi-icon">📞</span><span>1800 6996</span>
+          </div>
+          <div class="footer-info-item">
+            <span class="fi-icon">✉️</span><span>info@yourlife.com.vn</span>
+          </div>
+          <div class="footer-info-item">
+            <span class="fi-icon">🕐</span><span>07:00 – 22:00 hàng ngày</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <h3 class="footer-heading">Kết nối với chúng tôi</h3>
+        <p class="footer-contact-desc">
+          Theo dõi YourLife trên mạng xã hội để nhận thông tin khuyến mãi mới
+          nhất.
+        </p>
+        <div class="footer-social">
+          <a href="#" class="social-btn">Facebook</a>
+          <a href="#" class="social-btn">Zalo</a>
+          <a href="#" class="social-btn">Instagram</a>
+        </div>
+        <a href="#" class="footer-admin">Trang quản trị</a>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2026 YourLife. Tất cả quyền được bảo lưu.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Filter logic
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const allCards = document.querySelectorAll(".news-card[data-tag]");
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterBtns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          const filter = btn.dataset.filter;
+          allCards.forEach((card) => {
+            if (filter === "all" || card.dataset.tag === filter) {
+              card.style.display = "";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+      // Email subscribe
+      function handleSubscribe(e) {
+        e.preventDefault();
+        document.getElementById("cta-success").style.display = "block";
+        e.target.reset();
+      }
+    </script>
+    <script src="../assets/js/account-dropdown.js"></script>
+  </body>
+</html>
