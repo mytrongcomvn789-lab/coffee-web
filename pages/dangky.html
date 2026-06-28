@@ -10,8 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="stylesheet" href="../assets/css/override.css" />
-    <link rel="stylesheet" href="../assets/css/auth.css" />
+    <link rel="stylesheet" href="../assets/css/pages/auth.css" />
     <title>Đăng ký – YourLife Coffee</title>
   </head>
   <body class="auth-page">
@@ -19,7 +18,7 @@
     <header class="header">
       <a href="../index.html" class="header-brand">
         <div class="brand-icon">
-          <img src="../assets/images/logo.jpg" alt="YourLife Coffee" />
+          <img src="../assets/images/trangchu/logo.jpg" alt="YourLife Coffee" />
         </div>
         <span class="brand-name">YourLife</span>
       </a>
@@ -29,7 +28,7 @@
             <a href="../index.html" class="nav-link">Trang chủ</a>
           </li>
           <li class="nav-item">
-            <a href="../Menu.html#menu" class="nav-link">Menu</a>
+            <a href="./menu.html" class="nav-link">Menu</a>
           </li>
           <li class="nav-item">
             <a href="./khuyenmai.html" class="nav-link">Khuyến mãi</a>
@@ -359,13 +358,13 @@
     <script>
       function togglePass(id, btn) {
         const input = document.getElementById(id);
-        input.type = input.type === "password" ? "text" : "password";
-        btn.textContent = input.type === "password" ? "👁" : "🙈";
+        input.type = input.type === 'password' ? 'text' : 'password';
+        btn.textContent = input.type === 'password' ? '👁' : '🙈';
       }
 
       function checkPassStrength(val) {
-        const fill = document.getElementById("strength-fill");
-        const label = document.getElementById("strength-label");
+        const fill = document.getElementById('strength-fill');
+        const label = document.getElementById('strength-label');
         let score = 0;
         if (val.length >= 8) score++;
         if (/[A-Z]/.test(val)) score++;
@@ -373,11 +372,11 @@
         if (/[^A-Za-z0-9]/.test(val)) score++;
 
         const levels = [
-          { w: "0%", color: "", text: "" },
-          { w: "25%", color: "#e05252", text: "Rất yếu" },
-          { w: "50%", color: "#f59e0b", text: "Yếu" },
-          { w: "75%", color: "#3b82f6", text: "Tốt" },
-          { w: "100%", color: "#10b981", text: "Mạnh" },
+          { w: '0%', color: '', text: '' },
+          { w: '25%', color: '#e05252', text: 'Rất yếu' },
+          { w: '50%', color: '#f59e0b', text: 'Yếu' },
+          { w: '75%', color: '#3b82f6', text: 'Tốt' },
+          { w: '100%', color: '#10b981', text: 'Mạnh' },
         ];
         const lvl = val.length === 0 ? levels[0] : levels[score] || levels[1];
         fill.style.width = lvl.w;
@@ -387,69 +386,69 @@
       }
 
       function checkConfirm() {
-        const pass = document.getElementById("reg-pass").value;
-        const conf = document.getElementById("reg-confirm").value;
-        const hint = document.getElementById("confirm-hint");
+        const pass = document.getElementById('reg-pass').value;
+        const conf = document.getElementById('reg-confirm').value;
+        const hint = document.getElementById('confirm-hint');
         if (!conf) {
-          hint.textContent = "";
+          hint.textContent = '';
           return;
         }
         if (pass === conf) {
-          hint.textContent = "✅ Mật khẩu khớp";
-          hint.style.color = "#10b981";
+          hint.textContent = '✅ Mật khẩu khớp';
+          hint.style.color = '#10b981';
         } else {
-          hint.textContent = "❌ Mật khẩu không khớp";
-          hint.style.color = "#e05252";
+          hint.textContent = '❌ Mật khẩu không khớp';
+          hint.style.color = '#e05252';
         }
       }
 
       // Email live validate
       document
-        .getElementById("reg-email")
-        .addEventListener("blur", function () {
-          const hint = document.getElementById("email-hint");
+        .getElementById('reg-email')
+        .addEventListener('blur', function () {
+          const hint = document.getElementById('email-hint');
           const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
           if (this.value && !re.test(this.value)) {
-            hint.textContent = "❌ Email không hợp lệ";
-            hint.style.color = "#e05252";
+            hint.textContent = '❌ Email không hợp lệ';
+            hint.style.color = '#e05252';
           } else {
-            hint.textContent = "";
+            hint.textContent = '';
           }
         });
 
       function handleRegister(e) {
         e.preventDefault();
-        const btn = document.getElementById("reg-btn");
-        const errEl = document.getElementById("reg-error");
-        const pass = document.getElementById("reg-pass").value;
-        const conf = document.getElementById("reg-confirm").value;
-        const terms = document.getElementById("reg-terms").checked;
+        const btn = document.getElementById('reg-btn');
+        const errEl = document.getElementById('reg-error');
+        const pass = document.getElementById('reg-pass').value;
+        const conf = document.getElementById('reg-confirm').value;
+        const terms = document.getElementById('reg-terms').checked;
 
-        errEl.style.display = "none";
+        errEl.style.display = 'none';
 
         if (pass !== conf) {
-          errEl.textContent = "⚠️ Mật khẩu xác nhận không khớp.";
-          errEl.style.display = "flex";
+          errEl.textContent = '⚠️ Mật khẩu xác nhận không khớp.';
+          errEl.style.display = 'flex';
           return;
         }
         if (pass.length < 8) {
-          errEl.textContent = "⚠️ Mật khẩu phải có ít nhất 8 ký tự.";
-          errEl.style.display = "flex";
+          errEl.textContent = '⚠️ Mật khẩu phải có ít nhất 8 ký tự.';
+          errEl.style.display = 'flex';
           return;
         }
         if (!terms) {
-          errEl.textContent = "⚠️ Vui lòng đồng ý với điều khoản sử dụng.";
-          errEl.style.display = "flex";
+          errEl.textContent = '⚠️ Vui lòng đồng ý với điều khoản sử dụng.';
+          errEl.style.display = 'flex';
           return;
         }
 
-        btn.querySelector(".btn-text").style.display = "none";
-        btn.querySelector(".btn-loader").style.display = "inline";
+        btn.querySelector('.btn-text').style.display = 'none';
+        btn.querySelector('.btn-loader').style.display = 'inline';
         btn.disabled = true;
 
         setTimeout(() => {
-          document.getElementById("register-form").style.display = "none";
-          document.getElementById("reg-success").style.display = "block";
+          document.getElementById('register-form').style.display = 'none';
+          document.getElementById('reg-success').style.display = 'block';
         }, 1400);
       }
     </script>

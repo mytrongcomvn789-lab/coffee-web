@@ -10,8 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="stylesheet" href="../assets/css/override.css" />
-    <link rel="stylesheet" href="../assets/css/pages.css" />
+    <link rel="stylesheet" href="../assets/css/pages/lienhe.css" />
     <title>Liên hệ – YourLife Coffee</title>
   </head>
   <body>
@@ -19,7 +18,7 @@
     <header class="header">
       <a href="../index.html" class="header-brand">
         <div class="brand-icon">
-          <img src="../assets/images/logo.jpg" alt="YourLife Coffee" />
+          <img src="../assets/images/trangchu/logo.jpg" alt="YourLife Coffee" />
         </div>
         <span class="brand-name">YourLife</span>
       </a>
@@ -29,7 +28,7 @@
             <a href="../index.html" class="nav-link">Trang chủ</a>
           </li>
           <li class="nav-item">
-            <a href="../Menu.html#menu" class="nav-link">Menu</a>
+            <a href="./menu.html" class="nav-link">Menu</a>
           </li>
           <li class="nav-item">
             <a href="./khuyenmai.html" class="nav-link">Khuyến mãi</a>
@@ -40,7 +39,7 @@
         </ul>
       </nav>
       <div class="header-action">
-        <a href="../Menu.html#menu-panel" class="cart"><i class="icon-cart"></i></a>
+        <a href="./cart.html" class="cart"><i class="icon-cart"></i></a>
         <button class="account">
           <i class="icon-user"></i><span>Tài khoản</span
           ><i class="icon-char"></i>
@@ -160,9 +159,24 @@
                   <div>
                     <span class="ci-label">Mạng xã hội</span>
                     <div class="ci-social">
-                      <a href="#" class="social-btn">Facebook</a>
-                      <a href="#" class="social-btn">Zalo</a>
-                      <a href="#" class="social-btn">Instagram</a>
+                      <a
+                        href="https://www.facebook.com/?locale=vi_VN"
+                        target="_blank"
+                        class="social-btn"
+                        >Facebook</a
+                      >
+                      <a
+                        href="https://id.zalo.me/account?continue=https%3A%2F%2Fchat.zalo.me%2F"
+                        target="_blank"
+                        class="social-btn"
+                        >Zalo</a
+                      >
+                      <a
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        class="social-btn"
+                        >Instagram</a
+                      >
                     </div>
                   </div>
                 </div>
@@ -337,7 +351,7 @@
       <div class="footer-main">
         <div class="footer-brand">
           <div class="footer-brand-icon">
-            <img src="../assets/images/logo.jpg" alt="YourLife" />
+            <img src="../assets/images/trangchu/logo.jpg" alt="YourLife" />
           </div>
           <span class="footer-brand-name">YourLife</span>
         </div>
@@ -350,9 +364,9 @@
         <nav>
           <ul>
             <li><a href="../index.html">Trang chủ</a></li>
-            <li><a href="../index.html#menu">Menu</a></li>
+            <li><a href="./menu.html">Menu</a></li>
             <li><a href="./khuyenmai.html">Khuyến mãi</a></li>
-            <li><a href="./contact.html">Liên hệ</a></li>
+            <li><a href="./lienhe.html">Liên hệ</a></li>
           </ul>
         </nav>
       </div>
@@ -381,11 +395,26 @@
           nhất.
         </p>
         <div class="footer-social">
-          <a href="#" class="social-btn">Facebook</a>
-          <a href="#" class="social-btn">Zalo</a>
-          <a href="#" class="social-btn">Instagram</a>
+          <a
+            href="https://www.facebook.com/?locale=vi_VN"
+            target="_blank"
+            class="social-btn"
+            >Facebook</a
+          >
+          <a
+            href="https://id.zalo.me/account?continue=https%3A%2F%2Fchat.zalo.me%2F"
+            target="_blank"
+            class="social-btn"
+            >Zalo</a
+          >
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            class="social-btn"
+            >Instagram</a
+          >
         </div>
-        <a href="#" class="footer-admin">Trang quản trị</a>
+        <a href="" class="footer-admin">Trang quản trị</a>
       </div>
       <div class="footer-bottom">
         <p class="footer-copyright">
@@ -397,13 +426,13 @@
     <script>
       function handleContactSubmit(e) {
         e.preventDefault();
-        document.getElementById("contact-form").style.display = "none";
-        document.getElementById("form-success").style.display = "block";
+        document.getElementById('contact-form').style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
       }
       function resetForm() {
-        document.getElementById("contact-form").style.display = "";
-        document.getElementById("form-success").style.display = "none";
-        document.getElementById("contact-form").reset();
+        document.getElementById('contact-form').style.display = '';
+        document.getElementById('form-success').style.display = 'none';
+        document.getElementById('contact-form').reset();
       }
     </script>
     <script src="../assets/js/account-dropdown.js"></script>

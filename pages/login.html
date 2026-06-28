@@ -10,8 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="stylesheet" href="../assets/css/override.css" />
-    <link rel="stylesheet" href="../assets/css/auth.css" />
+    <link rel="stylesheet" href="../assets/css/pages/auth.css" />
     <title>Đăng nhập – YourLife Coffee</title>
   </head>
   <body class="auth-page">
@@ -19,7 +18,7 @@
     <header class="header">
       <a href="../index.html" class="header-brand">
         <div class="brand-icon">
-          <img src="../assets/images/logo.jpg" alt="YourLife Coffee" />
+          <img src="../assets/images/trangchu/logo.jpg" alt="YourLife Coffee" />
         </div>
         <span class="brand-name">YourLife</span>
       </a>
@@ -29,7 +28,7 @@
             <a href="../index.html" class="nav-link">Trang chủ</a>
           </li>
           <li class="nav-item">
-            <a href="../Menu.html#menu" class="nav-link">Menu</a>
+            <a href="./menu.html" class="nav-link">Menu</a>
           </li>
           <li class="nav-item">
             <a href="./khuyenmai.html" class="nav-link">Khuyến mãi</a>
@@ -196,7 +195,7 @@
 
           <p class="auth-bottom-text">
             Chưa có tài khoản?
-            <a href="./register.html" class="auth-link">Tạo tài khoản mới</a>
+            <a href="./dangky.html" class="auth-link">Tạo tài khoản mới</a>
           </p>
         </div>
       </div>
@@ -205,52 +204,52 @@
     <script>
       function togglePass(id, btn) {
         const input = document.getElementById(id);
-        if (input.type === "password") {
-          input.type = "text";
-          btn.textContent = "🙈";
+        if (input.type === 'password') {
+          input.type = 'text';
+          btn.textContent = '🙈';
         } else {
-          input.type = "password";
-          btn.textContent = "👁";
+          input.type = 'password';
+          btn.textContent = '👁';
         }
       }
 
       function handleLogin(e) {
         e.preventDefault();
-        const btn = document.getElementById("login-btn");
-        const errEl = document.getElementById("login-error");
-        const email = document.getElementById("login-email").value;
-        const pass = document.getElementById("login-pass").value;
+        const btn = document.getElementById('login-btn');
+        const errEl = document.getElementById('login-error');
+        const email = document.getElementById('login-email').value;
+        const pass = document.getElementById('login-pass').value;
 
-        btn.querySelector(".btn-text").style.display = "none";
-        btn.querySelector(".btn-loader").style.display = "inline";
+        btn.querySelector('.btn-text').style.display = 'none';
+        btn.querySelector('.btn-loader').style.display = 'inline';
         btn.disabled = true;
-        errEl.style.display = "none";
+        errEl.style.display = 'none';
 
         // Giả lập gọi API
         setTimeout(() => {
           // Demo: chỉ chấp nhận user@demo.com / 123456
-          if (email === "user@demo.com" && pass === "123456") {
+          if (email === 'user@demo.com' && pass === '123456') {
             localStorage.setItem(
-              "yl_user",
-              JSON.stringify({ name: "Thành viên", email }),
+              'yl_user',
+              JSON.stringify({ name: 'Thành viên', email }),
             );
-            window.location.href = "../index.html";
+            window.location.href = '../index.html';
           } else {
-            errEl.style.display = "flex";
-            btn.querySelector(".btn-text").style.display = "inline";
-            btn.querySelector(".btn-loader").style.display = "none";
+            errEl.style.display = 'flex';
+            btn.querySelector('.btn-text').style.display = 'inline';
+            btn.querySelector('.btn-loader').style.display = 'none';
             btn.disabled = false;
           }
         }, 1200);
       }
 
       // Social login (demo)
-      document.querySelectorAll(".social-login-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          btn.style.opacity = "0.7";
-          btn.textContent = "⏳ Đang xử lý...";
+      document.querySelectorAll('.social-login-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          btn.style.opacity = '0.7';
+          btn.textContent = '⏳ Đang xử lý...';
           setTimeout(() => {
-            btn.style.opacity = "";
+            btn.style.opacity = '';
             btn.innerHTML = btn.innerHTML;
           }, 1500);
         });

@@ -5,26 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YourLife Coffee - Giỏ hàng</title>
     <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="stylesheet" href="../assets/css/cart.css" />
+    <link rel="stylesheet" href="../assets/css/pages/cart.css" />
   </head>
   <body>
     <header class="header">
       <a href="../index.html" class="header-brand">
         <div class="brand-icon">
-          <img src="../assets/images/logo.jpg" alt="YourLife Coffee" />
+          <img src="../assets/images/trangchu/logo.jpg" alt="YourLife Coffee" />
         </div>
         <span class="brand-name">YourLife</span>
       </a>
       <nav class="navbar">
         <ul class="nav">
-          <li class="nav-item"><a href="../index.html" class="nav-link">Trang chủ</a></li>
-          <li class="nav-item"><a href="../Menu.html" class="nav-link">Menu</a></li>
-          <li class="nav-item"><a href="./khuyenmai.html" class="nav-link">Khuyến mãi</a></li>
-          <li class="nav-item"><a href="./lienhe.html" class="nav-link">Liên hệ</a></li>
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a href="./menu.html" class="nav-link">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a href="./khuyenmai.html" class="nav-link">Khuyến mãi</a>
+          </li>
+          <li class="nav-item">
+            <a href="./lienhe.html" class="nav-link">Liên hệ</a>
+          </li>
         </ul>
       </nav>
       <div class="header-action">
-        <a href="../Menu.html" class="cart"><i class="icon-cart"></i></a>
+        <a href="./menu.html" class="cart"><i class="icon-cart"></i></a>
         <button class="account">
           <i class="icon-user"></i>
           <span>Tài khoản</span>
@@ -35,16 +43,17 @@
 
     <main class="cart-page">
       <div class="cart-shell">
-        <div class="cart-shell-header">
-        </div>
+        <div class="cart-shell-header"></div>
         <div class="cart-container" id="cartContainer">
           <section class="cart-main" id="cartMain">
             <div class="cart-empty" id="cartEmpty">
-                   <h1>Giỏ hàng</h1>
+              <h1>Giỏ hàng</h1>
               <span class="cart-empty-icon">🛒</span>
               <h2>Giỏ hàng trống</h2>
               <p>Chưa có sản phẩm nào trong giỏ của bạn.</p>
-              <a href="../Menu.html#menu-panel" class="btn-primary cart-empty-btn">Xem Menu</a>
+              <a href="./menu.html" class="btn-primary cart-empty-btn"
+                >Xem Menu</a
+              >
             </div>
             <div class="cart-items hidden" id="cartItems"></div>
           </section>
@@ -65,8 +74,12 @@
               <span>Tổng Tiền</span>
               <strong id="summaryTotal">0đ</strong>
             </div>
-            <button class="btn-checkout" id="checkoutBtn">Hoàn tất đơn hàng</button>
-            <button class="btn-outline btn-full" id="clearCartBtn">Xóa tất cả</button>
+            <button class="btn-checkout" id="checkoutBtn">
+              Hoàn tất đơn hàng
+            </button>
+            <button class="btn-outline btn-full" id="clearCartBtn">
+              Xóa tất cả
+            </button>
           </aside>
         </div>
       </div>
@@ -76,7 +89,7 @@
       <div class="footer-main">
         <div class="footer-brand">
           <div class="footer-brand-icon">
-            <img src="../assets/images/logo.jpg" alt="YourLife" />
+            <img src="../assets/images/trangchu/logo.jpg" alt="YourLife" />
           </div>
           <span class="footer-brand-name">YourLife</span>
         </div>
@@ -88,8 +101,8 @@
         <h3 class="footer-heading">Liên kết nhanh</h3>
         <ul>
           <li><a href="../index.html">Trang chủ</a></li>
-          <li><a href="../Menu.html">Menu</a></li>
-          <li><a href="#">Khuyến mãi</a></li>
+          <li><a href="./menu.html">Menu</a></li>
+          <li><a href="./khuyenmai.html">Khuyến mãi</a></li>
           <li><a href="./lienhe.html">Liên hệ</a></li>
         </ul>
       </div>
@@ -114,20 +127,38 @@
           </div>
         </div>
       </div>
-      <div>
+      <div class="footer-contact">
         <h3 class="footer-heading">Kết nối với chúng tôi</h3>
-        <div class="footer-social">
-          <a class="social-btn" href="#">Facebook</a>
-          <a class="social-btn" href="#">Zalo</a>
-          <a class="social-btn" href="#">Instagram</a>
-        </div>
         <p class="footer-contact-desc">
-          Theo dõi YourLife để nhận thông tin khuyến mãi và sản phẩm mới nhất.
+          Theo dõi YourLife trên mạng xã hội để nhận thông tin khuyến mãi mới
+          nhất.
         </p>
-        <a href="#" class="footer-admin">Trang quản trị</a>
+        <div class="footer-social">
+          <a
+            href="https://www.facebook.com/?locale=vi_VN"
+            target="_blank"
+            class="social-btn"
+            >Facebook</a
+          >
+          <a
+            href="https://id.zalo.me/account?continue=https%3A%2F%2Fchat.zalo.me%2F"
+            target="_blank"
+            class="social-btn"
+            >Zalo</a
+          >
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            class="social-btn"
+            >Instagram</a
+          >
+        </div>
+        <a href="" class="footer-admin">Trang quản trị</a>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copyright">© 2026 YourLife. Tất cả quyền được bảo lưu.</p>
+        <p class="footer-copyright">
+          © 2026 YourLife. Tất cả quyền được bảo lưu.
+        </p>
       </div>
     </footer>
 
@@ -153,8 +184,14 @@
       }
 
       function updateSummary() {
-        const totalCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
-        const totalPrice = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
+        const totalCount = cartItems.reduce(
+          (sum, item) => sum + item.quantity,
+          0,
+        );
+        const totalPrice = cartItems.reduce(
+          (sum, item) => sum + item.price * item.quantity,
+          0,
+        );
         summaryCount.textContent = totalCount;
         summaryPrice.textContent = formatCurrency(totalPrice);
         summaryTotal.textContent = formatCurrency(totalPrice);
@@ -175,7 +212,7 @@
         cartContainer.classList.remove('empty-state');
         cartItemsWrapper.innerHTML = '';
 
-        cartItems.forEach(item => {
+        cartItems.forEach((item) => {
           const itemRow = document.createElement('div');
           itemRow.className = 'cart-item';
           itemRow.innerHTML = `
@@ -194,30 +231,40 @@
             </div>
           `;
 
-          itemRow.querySelector('[data-action="decrease"]').addEventListener('click', () => {
-            if (item.quantity > 1) {
-              item.quantity -= 1;
-            } else {
-              cartItems = cartItems.filter(cartItem => cartItem.name !== item.name);
-            }
-            saveCart();
-            renderCart();
-            updateSummary();
-          });
+          itemRow
+            .querySelector('[data-action="decrease"]')
+            .addEventListener('click', () => {
+              if (item.quantity > 1) {
+                item.quantity -= 1;
+              } else {
+                cartItems = cartItems.filter(
+                  (cartItem) => cartItem.name !== item.name,
+                );
+              }
+              saveCart();
+              renderCart();
+              updateSummary();
+            });
 
-          itemRow.querySelector('[data-action="increase"]').addEventListener('click', () => {
-            item.quantity += 1;
-            saveCart();
-            renderCart();
-            updateSummary();
-          });
+          itemRow
+            .querySelector('[data-action="increase"]')
+            .addEventListener('click', () => {
+              item.quantity += 1;
+              saveCart();
+              renderCart();
+              updateSummary();
+            });
 
-          itemRow.querySelector('.cart-remove').addEventListener('click', () => {
-            cartItems = cartItems.filter(cartItem => cartItem.name !== item.name);
-            saveCart();
-            renderCart();
-            updateSummary();
-          });
+          itemRow
+            .querySelector('.cart-remove')
+            .addEventListener('click', () => {
+              cartItems = cartItems.filter(
+                (cartItem) => cartItem.name !== item.name,
+              );
+              saveCart();
+              renderCart();
+              updateSummary();
+            });
 
           cartItemsWrapper.appendChild(itemRow);
         });
@@ -244,5 +291,6 @@
       renderCart();
       updateSummary();
     </script>
+    <script src="../assets/js/account-dropdown.js"></script>
   </body>
 </html>

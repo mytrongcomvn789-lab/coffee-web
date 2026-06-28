@@ -10,8 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="stylesheet" href="../assets/css/override.css" />
-    <link rel="stylesheet" href="../assets/css/pages.css" />
+    <link rel="stylesheet" href="../assets/css/pages/khuyenmai.css" />
     <title>Khuyến mãi – YourLife Coffee</title>
   </head>
   <body>
@@ -19,7 +18,7 @@
     <header class="header">
       <a href="../index.html" class="header-brand">
         <div class="brand-icon">
-          <img src="../assets/images/logo.jpg" alt="YourLife Coffee" />
+          <img src="../assets/images/trangchu/logo.jpg" alt="YourLife Coffee" />
         </div>
         <span class="brand-name">YourLife</span>
       </a>
@@ -29,7 +28,7 @@
             <a href="../index.html" class="nav-link">Trang chủ</a>
           </li>
           <li class="nav-item">
-            <a href="../Menu.html#menu" class="nav-link">Menu</a>
+            <a href="./menu.html" class="nav-link">Menu</a>
           </li>
           <li class="nav-item">
             <a href="./khuyenmai.html" class="nav-link active">Khuyến mãi</a>
@@ -40,7 +39,7 @@
         </ul>
       </nav>
       <div class="header-action">
-        <a href="../Menu.html#menu-panel" class="cart"><i class="icon-cart"></i></a>
+        <a href="./cart.html" class="cart"><i class="icon-cart"></i></a>
         <button class="account">
           <i class="icon-user"></i><span>Tài khoản</span
           ><i class="icon-char"></i>
@@ -82,7 +81,7 @@
             <div class="promo-content">
               <p class="promo-tag">Chỉ hôm nay</p>
               <h3 class="promo-title">Mua 2 Cà Phê<br />Tặng 1 Miễn Phí</h3>
-              <a href="#" class="btn-promo-primary">Đặt ngay</a>
+              <a href="./menu.html" class="btn-promo-primary">Đặt ngay</a>
             </div>
           </div>
           <div class="promo-card brown">
@@ -332,7 +331,7 @@
       <div class="footer-main">
         <div class="footer-brand">
           <div class="footer-brand-icon">
-            <img src="../assets/images/logo.jpg" alt="YourLife" />
+            <img src="../assets/images/trangchu/logo.jpg" alt="YourLife" />
           </div>
           <span class="footer-brand-name">YourLife</span>
         </div>
@@ -345,9 +344,9 @@
         <nav>
           <ul>
             <li><a href="../index.html">Trang chủ</a></li>
-            <li><a href="../index.html#menu">Menu</a></li>
+            <li><a href="./menu.html">Menu</a></li>
             <li><a href="./khuyenmai.html">Khuyến mãi</a></li>
-            <li><a href="./contact.html">Liên hệ</a></li>
+            <li><a href="./lienhe.html">Liên hệ</a></li>
           </ul>
         </nav>
       </div>
@@ -376,11 +375,26 @@
           nhất.
         </p>
         <div class="footer-social">
-          <a href="#" class="social-btn">Facebook</a>
-          <a href="#" class="social-btn">Zalo</a>
-          <a href="#" class="social-btn">Instagram</a>
+          <a
+            href="https://www.facebook.com/?locale=vi_VN"
+            target="_blank"
+            class="social-btn"
+            >Facebook</a
+          >
+          <a
+            href="https://id.zalo.me/account?continue=https%3A%2F%2Fchat.zalo.me%2F"
+            target="_blank"
+            class="social-btn"
+            >Zalo</a
+          >
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            class="social-btn"
+            >Instagram</a
+          >
         </div>
-        <a href="#" class="footer-admin">Trang quản trị</a>
+        <a href="" class="footer-admin">Trang quản trị</a>
       </div>
       <div class="footer-bottom">
         <p class="footer-copyright">
@@ -391,18 +405,18 @@
 
     <script>
       // Filter logic
-      const filterBtns = document.querySelectorAll(".filter-btn");
-      const allCards = document.querySelectorAll(".news-card[data-tag]");
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const allCards = document.querySelectorAll('.news-card[data-tag]');
       filterBtns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          filterBtns.forEach((b) => b.classList.remove("active"));
-          btn.classList.add("active");
+        btn.addEventListener('click', () => {
+          filterBtns.forEach((b) => b.classList.remove('active'));
+          btn.classList.add('active');
           const filter = btn.dataset.filter;
           allCards.forEach((card) => {
-            if (filter === "all" || card.dataset.tag === filter) {
-              card.style.display = "";
+            if (filter === 'all' || card.dataset.tag === filter) {
+              card.style.display = '';
             } else {
-              card.style.display = "none";
+              card.style.display = 'none';
             }
           });
         });
@@ -410,7 +424,7 @@
       // Email subscribe
       function handleSubscribe(e) {
         e.preventDefault();
-        document.getElementById("cta-success").style.display = "block";
+        document.getElementById('cta-success').style.display = 'block';
         e.target.reset();
       }
     </script>

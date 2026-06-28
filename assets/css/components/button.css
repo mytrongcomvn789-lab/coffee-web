@@ -1,0 +1,87 @@
+/* ============================================================
+   BUTTON.CSS – Tất cả button dùng chung
+   ============================================================ */
+
+/* Btn lớn (hero section) */
+.btn-primary,
+.btn-outline {
+  min-width: 215px; height: 66px;
+  border-radius: var(--radius-xl); padding: 0 34px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+  font-size: 20px; font-weight: 800;
+  transition: var(--transition);
+}
+.btn-primary { background-color: var(--color-accent); color: #fff; box-shadow: 0 12px 26px rgba(0,0,0,0.22); border: none; }
+.btn-primary:hover { transform: translateY(-3px); background-color: var(--color-accent-dark); }
+.btn-outline { border: 1px solid rgba(255,255,255,0.35); background-color: rgba(255,255,255,0.08); color: #fff; backdrop-filter: blur(4px); }
+.btn-outline:hover { transform: translateY(-3px); background-color: rgba(255,255,255,0.16); }
+.icon-arrow-right::before { content: '→'; font-size: 24px; }
+
+/* Btn thêm vào giỏ */
+.btn-add {
+  height: 40px; padding: 0 18px;
+  border-radius: 22px; border: none;
+  background-color: var(--color-primary); color: #fff;
+  font-size: 14px; font-weight: 700;
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: var(--transition); white-space: nowrap;
+}
+.btn-add:hover    { background-color: var(--color-primary-dark); transform: translateY(-2px); }
+.btn-add.btn-added { background-color: #2c7b40; }
+
+/* Btn submit form */
+.btn-submit {
+  width: 100%; height: 54px;
+  border-radius: var(--radius-xl); border: none;
+  background: var(--color-primary); color: #fff;
+  font-size: 17px; font-weight: 700;
+  transition: var(--transition);
+}
+.btn-submit:hover { background: var(--color-primary-muted); transform: translateY(-2px); }
+
+/* Btn auth */
+.auth-submit-btn {
+  width: 100%; height: 54px;
+  border-radius: var(--radius-xl); border: none;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-muted) 100%);
+  color: #fff; font-size: 17px; font-weight: 700;
+  box-shadow: 0 6px 20px rgba(30,77,58,0.25);
+  transition: var(--transition);
+}
+.auth-submit-btn:hover  { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(30,77,58,0.32); }
+.auth-submit-btn:disabled { opacity: 0.65; cursor: not-allowed; transform: none; }
+
+/* Btn checkout */
+.btn-checkout {
+  width: 100%; padding: 14px 18px;
+  border-radius: var(--radius-xl); border: none;
+  background: var(--color-primary); color: #fff;
+  font-weight: 900; font-size: 16px;
+  margin-top: 18px; box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+  transition: var(--transition);
+}
+.btn-checkout:hover { background: var(--color-primary-dark); transform: translateY(-2px); }
+
+/* Btn nhỏ (khuyến mãi) */
+.btn-promo-primary {
+  height: 44px; padding: 0 26px;
+  border-radius: 24px; border: none;
+  background-color: var(--color-accent); color: #fff;
+  font-size: 15px; font-weight: 700;
+  display: inline-flex; align-items: center;
+  transition: var(--transition);
+}
+.btn-promo-primary:hover { background-color: var(--color-accent-dark); transform: translateY(-2px); }
+.btn-promo-outline {
+  height: 44px; padding: 0 26px;
+  border-radius: 24px; border: 2px solid rgba(255,255,255,0.6);
+  background-color: transparent; color: #fff;
+  font-size: 15px; font-weight: 700;
+  display: inline-flex; align-items: center;
+  transition: var(--transition);
+}
+.btn-promo-outline:hover { background-color: rgba(255,255,255,0.12); transform: translateY(-2px); }
+
+@media (max-width: 768px) {
+  .btn-primary, .btn-outline { width: 100%; max-width: 320px; height: 56px; font-size: 17px; }
+}

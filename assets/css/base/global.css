@@ -1,0 +1,46 @@
+/* ============================================================
+   GLOBAL.CSS – Tiện ích dùng mọi nơi
+   ============================================================ */
+.hidden { display: none !important; }
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 86px 9%;
+}
+@media (max-width: 768px) {
+  .section { padding: 64px 20px; }
+}
+
+/* Page hero dùng chung */
+.page-hero {
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px 70px;
+  background-color: var(--color-primary);
+  background-image: linear-gradient(180deg, #0b291d 0%, #1e4d3a 100%);
+}
+.page-hero-content { max-width: 680px; }
+.page-hero-label {
+  font-size: 13px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--color-accent); margin-bottom: 18px;
+}
+.page-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 700; color: #fff;
+  line-height: 1.1; margin-bottom: 18px;
+}
+.page-hero-desc {
+  font-size: 18px;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.6;
+}

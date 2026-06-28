@@ -4,23 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/pages/home.css" />
     <title>YourLife Coffee</title>
   </head>
-  <body id="top">
+  <body>
     <header class="header">
-      <a href="#top" target="_self" class="header-brand">
+      <a href="./index.html" target="_self" class="header-brand">
         <div class="brand-icon">
-          <img src="./assets/images/logo.jpg" alt="YourLife Coffee" />
+          <img src="./assets/images/trangchu/logo.jpg" alt="YourLife Coffee" />
         </div>
         <span class="brand-name">YourLife</span>
       </a>
       <nav class="navbar">
         <ul class="nav">
           <li class="nav-item">
-            <a href="#top" class="nav-link">Trang chủ</a>
+            <a href="./index.html#top" class="nav-link active">Trang chủ</a>
           </li>
           <li class="nav-item">
-            <a href="./Menu.html" class="nav-link">Menu</a>
+            <a href="./pages/menu.html" class="nav-link">Menu</a>
           </li>
           <li class="nav-item">
             <a href="./pages/khuyenmai.html" class="nav-link">Khuyến mãi</a>
@@ -31,7 +32,7 @@
         </ul>
       </nav>
       <div class="header-action">
-        <a href="./Menu.html#menu-panel" class="cart">
+        <a href="./pages/cart.html" class="cart">
           <i class="icon-cart"></i>
         </a>
         <button class="account">
@@ -58,7 +59,7 @@
               gian thư giãn tuyệt vời.
             </p>
             <div class="first-action">
-              <a href="./Menu.html" class="btn-primary">
+              <a href="./pages/menu.html" class="btn-primary">
                 Xem menu <i class="icon-arrow-right"></i>
               </a>
               <a href="./pages/khuyenmai.html" class="btn-outline">
@@ -89,9 +90,9 @@
             </p>
           </div>
           <div class="second-category">
-            <a href="./Menu.html#menu-panel" class="category-card">
+            <a href="./pages/menu.html" class="category-card">
               <img
-                src="./assets/images/cà phê.jpg"
+                src="./assets/images/trangchu/caphe.jpg"
                 alt="Cà phê"
                 class="category-image"
               />
@@ -103,9 +104,9 @@
                 </div>
               </div>
             </a>
-            <a href="./Menu.html#menu-panel" class="category-card">
+            <a href="./pages/menu.html" class="category-card">
               <img
-                src="./assets/images/trà.jpg"
+                src="./assets/images/trangchu/tra.jpg"
                 alt="Trà"
                 class="category-image"
               />
@@ -117,9 +118,9 @@
                 </div>
               </div>
             </a>
-            <a href="./Menu.html#menu-panel" class="category-card">
+            <a href="./pages/menu.html" class="category-card">
               <img
-                src="./assets/images/trà sữa.jpg"
+                src="./assets/images/trangchu/trasua.jpg"
                 alt="Trà sữa"
                 class="category-image"
               />
@@ -131,9 +132,9 @@
                 </div>
               </div>
             </a>
-            <a href="./Menu.html#menu-panel" class="category-card">
+            <a href="./pages/menu.html" class="category-card">
               <img
-                src="./assets/images/bánh.jpg"
+                src="./assets/images/trangchu/banh.jpg"
                 alt="Bánh"
                 class="category-image"
               />
@@ -156,7 +157,7 @@
               <h2 class="third-title">Sản phẩm bán chạy</h2>
               <p class="third-desc">Được yêu thích nhất trong tuần</p>
             </div>
-            <a href="" class="third-view-all">Xem tất cả</a>
+            <a href="./pages/menu.html" class="third-view-all">Xem tất cả</a>
           </div>
           <div class="product-grid">
             <!-- Card 1 -->
@@ -343,7 +344,11 @@
       <section class="promo-section">
         <div class="promo-container">
           <div class="promo-card green">
-            <img src="./assets/images/trà.jpg" alt="" class="promo-bg" />
+            <img
+              src="./assets/images/trangchu/tra.jpg"
+              alt=""
+              class="promo-bg"
+            />
             <div class="promo-overlay"></div>
             <div class="promo-content">
               <p class="promo-tag">Chỉ hôm nay</p>
@@ -352,7 +357,11 @@
             </div>
           </div>
           <div class="promo-card brown">
-            <img src="./assets/images/cà phê.jpg" alt="" class="promo-bg" />
+            <img
+              src="./assets/images/trangchu/caphe.jpg"
+              alt=""
+              class="promo-bg"
+            />
             <div class="promo-overlay"></div>
             <div class="promo-content">
               <p class="promo-tag">Ưu đãi mùa hè</p>
@@ -384,7 +393,7 @@
           </div>
           <div class="story-image-wrap">
             <img
-              src="./assets/images/cà phê.jpg"
+              src="./assets/images/trangchu/caphe.jpg"
               alt="Câu chuyện YourLife Coffee"
             />
           </div>
@@ -397,7 +406,7 @@
       <div class="footer-main">
         <div class="footer-brand">
           <div class="footer-brand-icon">
-            <img src="./assets/images/logo.jpg" alt="YourLife" />
+            <img src="./assets/images/trangchu/logo.jpg" alt="YourLife" />
           </div>
           <span class="footer-brand-name">YourLife</span>
         </div>
@@ -410,10 +419,10 @@
         <h3 class="footer-heading">Liên kết nhanh</h3>
         <nav>
           <ul>
-            <li><a href="#">Trang chủ</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Khuyến mãi</a></li>
-            <li><a href="#">Liên hệ</a></li>
+            <li><a href="./index.html">Trang chủ</a></li>
+            <li><a href="./pages/menu.html">Menu</a></li>
+            <li><a href="./pages/khuyenmai.html">Khuyến mãi</a></li>
+            <li><a href="./pages/lienhe.html">Liên hệ</a></li>
           </ul>
         </nav>
       </div>
@@ -447,9 +456,24 @@
           nhất.
         </p>
         <div class="footer-social">
-          <a href="" class="social-btn">Facebook</a>
-          <a href="" class="social-btn">Zalo</a>
-          <a href="" class="social-btn">Instagram</a>
+          <a
+            href="https://www.facebook.com/?locale=vi_VN"
+            target="_blank"
+            class="social-btn"
+            >Facebook</a
+          >
+          <a
+            href="https://id.zalo.me/account?continue=https%3A%2F%2Fchat.zalo.me%2F"
+            target="_blank"
+            class="social-btn"
+            >Zalo</a
+          >
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            class="social-btn"
+            >Instagram</a
+          >
         </div>
         <a href="" class="footer-admin">Trang quản trị</a>
       </div>
