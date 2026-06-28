@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../assets/css/style.css" />
@@ -34,9 +34,6 @@
             <a href="./khuyenmai.html" class="nav-link">Khuyến mãi</a>
           </li>
           <li class="nav-item">
-            <a href="./lichsu.html" class="nav-link">Lịch sử</a>
-          </li>
-          <li class="nav-item">
             <a href="./lienhe.html" class="nav-link">Liên hệ</a>
           </li>
         </ul>
@@ -51,410 +48,280 @@
       </div>
     </header>
 
-    <!-- AUTH LAYOUT -->
-    <main class="auth-main">
-      <!-- BÊN TRÁI -->
-      <div class="auth-visual">
-        <img
-          src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=900&h=1100&fit=crop&auto=format"
-          alt="YourLife Coffee"
-          class="auth-visual-img"
-        />
-        <div class="auth-visual-overlay">
-          <div class="auth-visual-content">
-            <span class="auth-visual-badge">🎉 Tham gia ngay</span>
-            <h2 class="auth-visual-title">Trở thành<br />thành viên!</h2>
-            <p class="auth-visual-desc">
-              Tạo tài khoản để nhận ngay ưu đãi chào mừng và tích lũy điểm
-              thưởng mỗi ngày.
-            </p>
-            <div class="auth-visual-perks">
-              <div class="perk-item">
-                <span class="perk-icon">🥤</span
-                ><span>1 ly miễn phí khi đăng ký</span>
-              </div>
-              <div class="perk-item">
-                <span class="perk-icon">⭐</span
-                ><span>Tích 1 điểm / 1.000đ chi tiêu</span>
-              </div>
-              <div class="perk-item">
-                <span class="perk-icon">🎂</span
-                ><span>Quà đặc biệt ngày sinh nhật</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- BÊN PHẢI: Form -->
-      <div class="auth-form-side">
-        <div class="auth-form-wrapper">
-          <div class="auth-logo-mobile">
-            <img src="../assets/images/logo.jpg" alt="YourLife" />
-            <span>YourLife</span>
-          </div>
-
-          <h1 class="auth-form-title">Tạo tài khoản</h1>
-          <p class="auth-form-sub">
-            Đã có tài khoản?
-            <a href="./login.html" class="auth-link">Đăng nhập</a>
-          </p>
-
-          <!-- SOCIAL -->
-          <div class="social-login">
-            <button class="social-login-btn" type="button">
-              <svg width="20" height="20" viewBox="0 0 24 24">
-                <path
-                  fill="#4285F4"
-                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
-                />
-                <path
-                  fill="#34A853"
-                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
-                />
-                <path
-                  fill="#FBBC05"
-                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
-                />
-                <path
-                  fill="#EA4335"
-                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
-                />
-              </svg>
-              Đăng ký với Google
-            </button>
-            <button class="social-login-btn" type="button">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2">
-                <path
-                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-                />
-              </svg>
-              Đăng ký với Facebook
-            </button>
-          </div>
-
-          <div class="auth-divider"><span>hoặc đăng ký bằng email</span></div>
-
-          <!-- FORM -->
-          <form id="register-form" onsubmit="handleRegister(event)" novalidate>
-            <div class="form-row-2">
-              <div class="auth-field">
-                <label class="auth-label">Họ</label>
-                <div class="auth-input-wrap">
-                  <span class="auth-input-icon">👤</span>
-                  <input
-                    type="text"
-                    class="auth-input"
-                    id="reg-last"
-                    placeholder="Nguyễn"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="auth-field">
-                <label class="auth-label">Tên</label>
-                <div class="auth-input-wrap">
-                  <input
-                    type="text"
-                    class="auth-input"
-                    id="reg-first"
-                    placeholder="Văn An"
-                    required
-                    style="padding-left: 16px"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div class="auth-field">
-              <label class="auth-label"
-                >Email <span class="auth-required">*</span></label
-              >
-              <div class="auth-input-wrap">
-                <span class="auth-input-icon">✉️</span>
-                <input
-                  type="email"
-                  class="auth-input"
-                  id="reg-email"
-                  placeholder="email@example.com"
-                  required
-                  autocomplete="email"
-                />
-              </div>
-              <span class="auth-field-hint" id="email-hint"></span>
-            </div>
-
-            <div class="auth-field">
-              <label class="auth-label">Số điện thoại</label>
-              <div class="auth-input-wrap">
-                <span class="auth-input-icon">📞</span>
-                <input
-                  type="tel"
-                  class="auth-input"
-                  id="reg-phone"
-                  placeholder="0901 234 567"
-                  autocomplete="tel"
-                />
-              </div>
-            </div>
-
-            <div class="auth-field">
-              <label class="auth-label">Ngày sinh</label>
-              <div class="auth-input-wrap">
-                <span class="auth-input-icon">🎂</span>
-                <input type="date" class="auth-input" id="reg-dob" />
-              </div>
-              <span class="auth-field-hint hint-green"
-                >Nhập ngày sinh để nhận quà sinh nhật đặc biệt!</span
-              >
-            </div>
-
-            <div class="auth-field">
-              <label class="auth-label"
-                >Mật khẩu <span class="auth-required">*</span></label
-              >
-              <div class="auth-input-wrap">
-                <span class="auth-input-icon">🔒</span>
-                <input
-                  type="password"
-                  class="auth-input"
-                  id="reg-pass"
-                  placeholder="Tối thiểu 8 ký tự"
-                  required
-                  autocomplete="new-password"
-                  oninput="checkPassStrength(this.value)"
-                />
-                <button
-                  type="button"
-                  class="auth-toggle-pass"
-                  onclick="togglePass('reg-pass', this)"
-                >
-                  👁
-                </button>
-              </div>
-              <!-- Strength bar -->
-              <div class="pass-strength-bar">
-                <div class="pass-strength-fill" id="strength-fill"></div>
-              </div>
-              <span class="pass-strength-label" id="strength-label"></span>
-            </div>
-
-            <div class="auth-field">
-              <label class="auth-label"
-                >Xác nhận mật khẩu <span class="auth-required">*</span></label
-              >
-              <div class="auth-input-wrap">
-                <span class="auth-input-icon">🔐</span>
-                <input
-                  type="password"
-                  class="auth-input"
-                  id="reg-confirm"
-                  placeholder="Nhập lại mật khẩu"
-                  required
-                  autocomplete="new-password"
-                  oninput="checkConfirm()"
-                />
-                <button
-                  type="button"
-                  class="auth-toggle-pass"
-                  onclick="togglePass('reg-confirm', this)"
-                >
-                  👁
-                </button>
-              </div>
-              <span class="auth-field-hint" id="confirm-hint"></span>
-            </div>
-
-            <div class="auth-field">
-              <label class="auth-label">Giới tính</label>
-              <div class="gender-group">
-                <label class="gender-option">
-                  <input
-                    type="radio"
-                    name="gender"
-                    value="male"
-                    class="gender-input"
-                  />
-                  <span class="gender-label">Nam</span>
-                </label>
-                <label class="gender-option">
-                  <input
-                    type="radio"
-                    name="gender"
-                    value="female"
-                    class="gender-input"
-                  />
-                  <span class="gender-label">Nữ</span>
-                </label>
-                <label class="gender-option">
-                  <input
-                    type="radio"
-                    name="gender"
-                    value="other"
-                    class="gender-input"
-                  />
-                  <span class="gender-label">Khác</span>
-                </label>
-              </div>
-            </div>
-
-            <div class="auth-terms">
-              <label class="checkbox-label">
-                <input
-                  type="checkbox"
-                  class="checkbox-input"
-                  id="reg-terms"
-                  required
-                />
-                <span class="checkbox-custom"></span>
-                <span
-                  >Tôi đồng ý với
-                  <a href="#" class="auth-link">Điều khoản sử dụng</a> và
-                  <a href="#" class="auth-link">Chính sách bảo mật</a></span
-                >
-              </label>
-              <label class="checkbox-label" style="margin-top: 10px">
-                <input type="checkbox" class="checkbox-input" id="reg-news" />
-                <span class="checkbox-custom"></span>
-                <span>Nhận thông báo khuyến mãi qua email</span>
-              </label>
-            </div>
-
-            <div id="reg-error" class="auth-error" style="display: none"></div>
-
-            <button type="submit" class="auth-submit-btn" id="reg-btn">
-              <span class="btn-text">Tạo tài khoản</span>
-              <span class="btn-loader" style="display: none">⏳</span>
-            </button>
-          </form>
-
-          <!-- SUCCESS STATE -->
-          <div id="reg-success" class="auth-success-box" style="display: none">
-            <div class="auth-success-icon">🎉</div>
-            <h3>Đăng ký thành công!</h3>
-            <p>
-              Chào mừng bạn đến với YourLife Coffee. Một ly đồ uống miễn phí
-              đang chờ bạn!
-            </p>
-            <a
-              href="./login.html"
-              class="auth-submit-btn"
-              style="
-                display: block;
-                text-align: center;
-                text-decoration: none;
-                margin-top: 20px;
-              "
+    <div class="auth-wrap">
+      <div class="auth-card">
+        <!-- Logo -->
+        <div class="auth-card-logo">
+          <div class="auth-card-logo-circle">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              Đăng nhập ngay
-            </a>
+              <path
+                d="M17 8H19C20.1046 8 21 8.89543 21 10V11C21 12.1046 20.1046 13 19 13H17"
+                stroke="#c9a84c"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M3 8H17V14C17 16.2091 15.2091 18 13 18H7C4.79086 18 3 16.2091 3 14V8Z"
+                stroke="#c9a84c"
+                stroke-width="2"
+              />
+              <path
+                d="M8 8V6C8 4.89543 8.89543 4 10 4H14C15.1046 4 16 4.89543 16 6V8"
+                stroke="#c9a84c"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <h1>Tạo tài khoản</h1>
+        <p class="auth-card-sub">
+          Tham gia cộng đồng YourLife Coffee ngay hôm nay!
+        </p>
+
+        <!-- Social -->
+        <div class="social-row">
+          <a
+            href="https://accounts.google.com/signin"
+            target="_blank"
+            class="social-btn"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24">
+              <path
+                fill="#4285F4"
+                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+              />
+              <path
+                fill="#34A853"
+                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+              />
+              <path
+                fill="#FBBC05"
+                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+              />
+              <path
+                fill="#EA4335"
+                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+              />
+            </svg>
+            Google
+          </a>
+          <a
+            href="https://www.facebook.com/?locale=vi_VN"
+            target="_blank"
+            class="social-btn"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#1877F2">
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+              />
+            </svg>
+            Facebook
+          </a>
+        </div>
+
+        <div class="auth-divider">hoặc đăng ký bằng email</div>
+
+        <!-- Form -->
+        <form id="register-form" onsubmit="handleRegister(event)" novalidate>
+          <div class="auth-field">
+            <label class="auth-label"
+              >Họ và tên <span class="auth-required">*</span></label
+            >
+            <div class="auth-input-wrap">
+              <input
+                type="text"
+                class="auth-input"
+                id="reg-name"
+                placeholder="Nguyễn Văn An"
+                required
+              />
+            </div>
           </div>
 
-          <p class="auth-bottom-text">
-            Đã có tài khoản?
-            <a href="./login.html" class="auth-link">Đăng nhập</a>
+          <div class="auth-field">
+            <label class="auth-label"
+              >Email <span class="auth-required">*</span></label
+            >
+            <div class="auth-input-wrap">
+              <input
+                type="email"
+                class="auth-input"
+                id="reg-email"
+                placeholder="email@example.com"
+                required
+                autocomplete="email"
+              />
+            </div>
+            <span class="auth-field-hint" id="email-hint"></span>
+          </div>
+
+          <div class="auth-field">
+            <label class="auth-label">Số điện thoại</label>
+            <div class="auth-input-wrap">
+              <input
+                type="tel"
+                class="auth-input"
+                id="reg-phone"
+                placeholder="0901234567"
+                autocomplete="tel"
+              />
+            </div>
+          </div>
+
+          <div class="auth-field">
+            <label class="auth-label"
+              >Mật khẩu <span class="auth-required">*</span></label
+            >
+            <div class="auth-input-wrap">
+              <input
+                type="password"
+                class="auth-input has-toggle"
+                id="reg-pass"
+                placeholder="Tối thiểu 8 ký tự"
+                required
+                autocomplete="new-password"
+                oninput="checkPassStrength(this.value)"
+              />
+              <span
+                class="auth-toggle-pass"
+                role="button"
+                tabindex="0"
+                onclick="togglePass('reg-pass', this)"
+                onkeydown="
+                  if (event.key === 'Enter' || event.key === ' ')
+                    togglePass('reg-pass', this);
+                "
+                >👁</span
+              >
+            </div>
+            <div class="pass-strength-bar">
+              <div class="pass-strength-fill" id="strength-fill"></div>
+            </div>
+            <span class="pass-strength-label" id="strength-label"></span>
+          </div>
+
+          <div class="auth-field">
+            <label class="auth-label"
+              >Xác nhận mật khẩu <span class="auth-required">*</span></label
+            >
+            <div class="auth-input-wrap">
+              <input
+                type="password"
+                class="auth-input has-toggle"
+                id="reg-confirm"
+                placeholder="Nhập lại mật khẩu"
+                required
+                autocomplete="new-password"
+                oninput="checkConfirm()"
+              />
+              <span
+                class="auth-toggle-pass"
+                role="button"
+                tabindex="0"
+                onclick="togglePass('reg-confirm', this)"
+                onkeydown="
+                  if (event.key === 'Enter' || event.key === ' ')
+                    togglePass('reg-confirm', this);
+                "
+                >👁</span
+              >
+            </div>
+            <span class="auth-field-hint" id="confirm-hint"></span>
+          </div>
+
+          <div class="auth-field">
+            <label class="auth-label">Giới tính</label>
+            <div class="gender-group">
+              <label class="gender-option">
+                <input
+                  type="radio"
+                  name="gender"
+                  value="male"
+                  class="gender-input"
+                />
+                <span class="gender-label">Nam</span>
+              </label>
+              <label class="gender-option">
+                <input
+                  type="radio"
+                  name="gender"
+                  value="female"
+                  class="gender-input"
+                />
+                <span class="gender-label">Nữ</span>
+              </label>
+              <label class="gender-option">
+                <input
+                  type="radio"
+                  name="gender"
+                  value="other"
+                  class="gender-input"
+                />
+                <span class="gender-label">Khác</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="auth-terms">
+            <label class="checkbox-label">
+              <input
+                type="checkbox"
+                class="checkbox-input"
+                id="reg-terms"
+                required
+              />
+              <span class="checkbox-custom"></span>
+              <span
+                >Tôi đồng ý với
+                <a href="#" class="auth-link">Điều khoản sử dụng</a> và
+                <a href="#" class="auth-link">Chính sách bảo mật</a></span
+              >
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" class="checkbox-input" id="reg-news" />
+              <span class="checkbox-custom"></span>
+              <span>Nhận thông báo khuyến mãi qua email</span>
+            </label>
+          </div>
+
+          <div id="reg-error" class="auth-error" style="display: none"></div>
+
+          <button type="submit" class="auth-submit-btn" id="reg-btn">
+            <span class="btn-text">Đăng ký</span>
+            <span class="btn-loader" style="display: none">Đang xử lý...</span>
+          </button>
+        </form>
+
+        <!-- Success -->
+        <div id="reg-success" class="auth-success-box" style="display: none">
+          <div class="auth-success-icon">🎉</div>
+          <h3>Đăng ký thành công!</h3>
+          <p>
+            Chào mừng bạn đến với YourLife Coffee. Một ly đồ uống miễn phí đang
+            chờ bạn!
           </p>
+          <a
+            href="./login.html"
+            class="auth-submit-btn"
+            style="margin-top: 20px"
+            >Đăng nhập ngay</a
+          >
         </div>
+
+        <p class="auth-bottom">
+          Đã có tài khoản? <a href="./login.html">Đăng nhập</a>
+        </p>
       </div>
-    </main>
+    </div>
 
-    <script>
-      function togglePass(id, btn) {
-        const input = document.getElementById(id);
-        input.type = input.type === 'password' ? 'text' : 'password';
-        btn.textContent = input.type === 'password' ? '👁' : '🙈';
-      }
-
-      function checkPassStrength(val) {
-        const fill = document.getElementById('strength-fill');
-        const label = document.getElementById('strength-label');
-        let score = 0;
-        if (val.length >= 8) score++;
-        if (/[A-Z]/.test(val)) score++;
-        if (/[0-9]/.test(val)) score++;
-        if (/[^A-Za-z0-9]/.test(val)) score++;
-
-        const levels = [
-          { w: '0%', color: '', text: '' },
-          { w: '25%', color: '#e05252', text: 'Rất yếu' },
-          { w: '50%', color: '#f59e0b', text: 'Yếu' },
-          { w: '75%', color: '#3b82f6', text: 'Tốt' },
-          { w: '100%', color: '#10b981', text: 'Mạnh' },
-        ];
-        const lvl = val.length === 0 ? levels[0] : levels[score] || levels[1];
-        fill.style.width = lvl.w;
-        fill.style.backgroundColor = lvl.color;
-        label.textContent = lvl.text;
-        label.style.color = lvl.color;
-      }
-
-      function checkConfirm() {
-        const pass = document.getElementById('reg-pass').value;
-        const conf = document.getElementById('reg-confirm').value;
-        const hint = document.getElementById('confirm-hint');
-        if (!conf) {
-          hint.textContent = '';
-          return;
-        }
-        if (pass === conf) {
-          hint.textContent = '✅ Mật khẩu khớp';
-          hint.style.color = '#10b981';
-        } else {
-          hint.textContent = '❌ Mật khẩu không khớp';
-          hint.style.color = '#e05252';
-        }
-      }
-
-      // Email live validate
-      document
-        .getElementById('reg-email')
-        .addEventListener('blur', function () {
-          const hint = document.getElementById('email-hint');
-          const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          if (this.value && !re.test(this.value)) {
-            hint.textContent = '❌ Email không hợp lệ';
-            hint.style.color = '#e05252';
-          } else {
-            hint.textContent = '';
-          }
-        });
-
-      function handleRegister(e) {
-        e.preventDefault();
-        const btn = document.getElementById('reg-btn');
-        const errEl = document.getElementById('reg-error');
-        const pass = document.getElementById('reg-pass').value;
-        const conf = document.getElementById('reg-confirm').value;
-        const terms = document.getElementById('reg-terms').checked;
-
-        errEl.style.display = 'none';
-
-        if (pass !== conf) {
-          errEl.textContent = '⚠️ Mật khẩu xác nhận không khớp.';
-          errEl.style.display = 'flex';
-          return;
-        }
-        if (pass.length < 8) {
-          errEl.textContent = '⚠️ Mật khẩu phải có ít nhất 8 ký tự.';
-          errEl.style.display = 'flex';
-          return;
-        }
-        if (!terms) {
-          errEl.textContent = '⚠️ Vui lòng đồng ý với điều khoản sử dụng.';
-          errEl.style.display = 'flex';
-          return;
-        }
-
-        btn.querySelector('.btn-text').style.display = 'none';
-        btn.querySelector('.btn-loader').style.display = 'inline';
-        btn.disabled = true;
-
-        setTimeout(() => {
-          document.getElementById('register-form').style.display = 'none';
-          document.getElementById('reg-success').style.display = 'block';
-        }, 1400);
-      }
-    </script>
+    <script src="../assets/js/validate.js"></script>
     <script src="../assets/js/account-dropdown.js"></script>
   </body>
 </html>
