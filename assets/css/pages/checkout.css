@@ -1,0 +1,120 @@
+/* Checkout page */
+.checkout-section {
+  background: #f8f2e8;
+  padding: 80px 9%;
+}
+.checkout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 32px;
+  align-items: start;
+}
+.checkout-left,
+.checkout-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.checkout-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 22px;
+  border: 1px solid #efe6db;
+  box-shadow: 0 6px 18px rgba(16, 24, 24, 0.06);
+}
+.checkout-card-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 28px;
+  color: #2c1a0e;
+  margin-bottom: 22px;
+}
+.checkout-methods {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.checkout-method {
+  padding: 18px 20px;
+  border-radius: 18px;
+  border: 1px solid #d9c9b5;
+  background: #f8f2e8;
+  color: #2c1a0e;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.checkout-method.active,
+.checkout-method:hover {
+  background: #1e4d3a;
+  border-color: #1e4d3a;
+  color: #ffffff;
+}
+
+/* Form styles */
+.checkout-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.form-group { display: flex; flex-direction: column; gap: 8px; }
+.form-label { color: #4b3b32; font-weight: 600; }
+.form-input { 
+  background: #f6efe6; 
+  border: 1px solid #efe6db; 
+  padding: 14px 16px; 
+  border-radius: 12px; 
+  font-size: 14px; 
+  color: #1b1b1b; 
+}
+.form-textarea { min-height: 72px; resize: vertical; }
+.required { color: #c76a00; margin-left: 6px; }
+
+/* Order summary */
+.order-summary-card { padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+.order-items { display: flex; flex-direction: column; gap: 12px; max-height: 260px; overflow: auto; padding-bottom: 6px; }
+.order-item { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.order-item-info { display:flex; gap: 12px; align-items:center; }
+.order-item img { width:56px; height:56px; object-fit:cover; border-radius:8px; }
+.order-item-title { font-weight:700; color:#2c1a0e; }
+.order-item-meta { color:#7a6b64; font-size:13px; }
+.order-item-price { font-weight:700; color:#2c1a0e; }
+.order-summary-row { display:flex; justify-content:space-between; color:#6b5d53; padding-top:6px; }
+.total-row strong { color:#1e4d3a; font-size:18px; }
+
+/* Confirm button */
+.btn-submit { 
+  background: linear-gradient(180deg,#caa34a,#b1862a); 
+  color:#fff; 
+  border:none; 
+  padding:12px 18px; 
+  border-radius:12px; 
+  font-weight:700; 
+  cursor:pointer; 
+  width:100%;
+}
+.btn-submit:disabled { opacity:0.6; cursor:not-allowed; }
+.order-note { color:#9b8f87; font-size:13px; margin:0; text-align:center; }
+
+/* Empty cart message */
+.empty-cart-message { color:#7a6b64; }
+
+@media (max-width: 900px) {
+  .checkout-container { grid-template-columns: 1fr; padding: 0 24px; }
+  .checkout-card { padding:18px; }
+  .checkout-form .form-row { grid-template-columns: 1fr; }
+  .order-items { max-height: 180px; }
+}
+
+/* Order success screen */
+.order-success { background: #f8f2e8; padding: 80px 9%; }
+.order-success-inner { max-width: 760px; margin: 0 auto; text-align: center; padding: 48px 28px; background: transparent; }
+.order-success .success-badge { width:88px; height:88px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; background:#dcf6e9; color:#1e9b52; font-size:40px; margin-bottom:18px; }
+.order-success h2 { font-family: "Playfair Display", Georgia, serif; font-size:32px; color:#2c1a0e; margin:8px 0 12px; }
+.order-success .success-desc { color:#6b5d53; margin-bottom:20px; }
+.order-success .success-actions { display:flex; gap:12px; justify-content:center; }
+.order-success .btn-primary { padding:12px 20px; border-radius:28px; background:#23533f; color:#fff; text-decoration:none; font-weight:700; }
+.order-success .btn-outline { padding:12px 20px; border-radius:28px; border:2px solid #cfc6bd; background:transparent; color:#2c1a0e; text-decoration:none; font-weight:700; }
+
+/* End of checkout page styles */

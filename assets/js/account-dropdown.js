@@ -1,9 +1,3 @@
-/**
- * account-dropdown.js – YourLife Coffee
- * Dùng chung cho tất cả trang.
- * Tự động nhận biết trang hiện tại để tính đúng đường dẫn
- * tới pages/login.html và pages/dangky.html.
- */
 (function () {
   // ── 1. Xác định prefix đường dẫn ──────────────────────────────────────────
   // Nếu đang ở thư mục /pages/ thì prefix = "./"  (cùng cấp)

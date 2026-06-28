@@ -36,6 +36,9 @@
           <li class="nav-item">
             <a href="./lienhe.html" class="nav-link">Liên hệ</a>
           </li>
+          <li class="nav-item">
+            <a href="./lichsu.html" class="nav-link">Lịch sử</a>
+          </li>
         </ul>
       </nav>
       <div class="header-action">
@@ -403,31 +406,7 @@
       </div>
     </footer>
 
-    <script>
-      // Filter logic
-      const filterBtns = document.querySelectorAll('.filter-btn');
-      const allCards = document.querySelectorAll('.news-card[data-tag]');
-      filterBtns.forEach((btn) => {
-        btn.addEventListener('click', () => {
-          filterBtns.forEach((b) => b.classList.remove('active'));
-          btn.classList.add('active');
-          const filter = btn.dataset.filter;
-          allCards.forEach((card) => {
-            if (filter === 'all' || card.dataset.tag === filter) {
-              card.style.display = '';
-            } else {
-              card.style.display = 'none';
-            }
-          });
-        });
-      });
-      // Email subscribe
-      function handleSubscribe(e) {
-        e.preventDefault();
-        document.getElementById('cta-success').style.display = 'block';
-        e.target.reset();
-      }
-    </script>
+    <script src="../assets/js/validate.js"></script>
     <script src="../assets/js/account-dropdown.js"></script>
   </body>
 </html>

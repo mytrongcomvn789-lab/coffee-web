@@ -1,0 +1,20 @@
+/* Lịch sử đơn hàng */
+.lichsu-page { background:#f8f2e8; padding:80px 9%; min-height:60vh; }
+.lichsu-container { max-width:920px; margin:0 auto; }
+.lichsu-title { font-family: "Playfair Display", Georgia, serif; font-size:32px; color:#2c1a0e; margin-bottom:20px; }
+.order-list { display:flex; flex-direction:column; gap:18px; }
+.order-card { background:#fff; border-radius:12px; padding:18px; border:1px solid #efe6db; box-shadow:0 6px 18px rgba(16,24,24,0.04); display:flex; flex-direction:column; }
+.order-card-head { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
+.order-meta { color:#6b5d53; font-size:13px; }
+.order-id { font-weight:700; color:#2c1a0e; }
+.status-badge { padding:6px 10px; border-radius:14px; background:#fff6e1; color:#ad7c2b; font-weight:700; font-size:13px; }
+.order-items { margin-top:12px; border-top:1px solid #f0e7de; padding-top:12px; display:flex; gap:12px; align-items:center; }
+.order-item-thumb { width:56px; height:56px; border-radius:8px; object-fit:cover; }
+.order-item-info { flex:1; }
+.order-item-title { font-weight:700; color:#2c1a0e; }
+.order-item-price { color:#1e4d3a; font-weight:700; }
+.order-total { display:flex; justify-content:flex-end; margin-top:8px; font-weight:700; color:#1e4d3a; }
+
+@media (max-width:720px) {
+  .lichsu-container { padding:0 12px; }
+}
