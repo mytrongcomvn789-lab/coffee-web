@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderOrderItems() {
     orderItemsContainer.innerHTML = '';
     if (!cartItems.length) {
-      orderItemsContainer.innerHTML = '<p class="empty-cart-message">Giỏ hàng đang trống. Vui lòng thêm sản phẩm trước khi thanh toán.</p>';
+      orderItemsContainer.innerHTML =
+        '<p class="empty-cart-message">Giỏ hàng đang trống. Vui lòng thêm sản phẩm trước khi thanh toán.</p>';
       subtotalAmount.textContent = '0đ';
       shippingAmount.textContent = '0đ';
       totalAmount.textContent = '0đ';
@@ -31,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let subtotal = 0;
-    cartItems.forEach(item => {
+    cartItems.forEach((item) => {
       subtotal += item.price * item.quantity;
       const element = document.createElement('div');
       element.className = 'order-item';
@@ -51,9 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
     confirmOrderBtn.disabled = false;
   }
 
-  deliveryButtons.forEach(button => {
+  deliveryButtons.forEach((button) => {
     button.addEventListener('click', () => {
-      deliveryButtons.forEach(item => item.classList.remove('active'));
+      deliveryButtons.forEach((item) => item.classList.remove('active'));
       button.classList.add('active');
       deliveryMethod = button.dataset.method;
       renderOrderItems();
@@ -83,8 +84,18 @@ document.addEventListener('DOMContentLoaded', () => {
       date: new Date().toLocaleDateString('vi-VN'),
       status: 'Chờ xác nhận',
       delivery: deliveryMethod === 'pickup' ? 'Đến lấy' : 'Giao hàng',
-      customer: { fullname, phone, address, note: document.getElementById('note').value.trim() },
-      items: cartItems.map(i => ({ name: i.name, quantity: i.quantity, price: i.price, image: i.image })),
+      customer: {
+        fullname,
+        phone,
+        address,
+        note: document.getElementById('note').value.trim(),
+      },
+      items: cartItems.map((i) => ({
+        name: i.name,
+        quantity: i.quantity,
+        price: i.price,
+        image: i.image,
+      })),
       subtotal: subtotal,
       shipping: fee,
       total: subtotal + fee,
@@ -109,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
       orderSuccess.scrollIntoView({ behavior: 'smooth' });
     } else {
       // fallback: redirect to menu
-      window.location.href = '../Menu.html';
+      window.location.href = '../menu.html';
     }
   });
 
