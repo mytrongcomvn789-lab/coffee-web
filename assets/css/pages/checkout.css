@@ -25,7 +25,7 @@
   box-shadow: 0 6px 18px rgba(16, 24, 24, 0.06);
 }
 .checkout-card-title {
-  font-family: "Playfair Display", Georgia, serif;
+font-family: var(--font-serif);
   font-size: 28px;
   color: #2c1a0e;
   margin-bottom: 22px;
@@ -111,7 +111,7 @@
 .order-success { background: #f8f2e8; padding: 80px 9%; }
 .order-success-inner { max-width: 760px; margin: 0 auto; text-align: center; padding: 48px 28px; background: transparent; }
 .order-success .success-badge { width:88px; height:88px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; background:#dcf6e9; color:#1e9b52; font-size:40px; margin-bottom:18px; }
-.order-success h2 { font-family: "Playfair Display", Georgia, serif; font-size:32px; color:#2c1a0e; margin:8px 0 12px; }
+.order-success h2 { font-family: var(--font-serif); font-size:32px; color:#2c1a0e; margin:8px 0 12px; }
 .order-success .success-desc { color:#6b5d53; margin-bottom:20px; }
 .order-success .success-actions { display:flex; gap:12px; justify-content:center; }
 .order-success .btn-primary { padding:12px 20px; border-radius:28px; background:#23533f; color:#fff; text-decoration:none; font-weight:700; }

@@ -5,46 +5,54 @@
 
 :root {
   /* Màu chính */
-  --color-primary:       #1e4d3a;
-  --color-primary-dark:  #162e24;
+  --color-primary: #1e4d3a;
+  --color-primary-dark: #162e24;
   --color-primary-muted: #163d2e;
-  --color-accent:        #d9a23a;
-  --color-accent-dark:   #c9922f;
+  --color-accent: #d9a23a;
+  --color-accent-dark: #c9922f;
 
   /* Màu nền */
-  --color-bg:            #fdf6ec;
-  --color-bg-secondary:  #f8f2e8;
-  --color-bg-muted:      #f3ebe0;
+  --color-bg: #fdf6ec;
+  --color-bg-secondary: #f8f2e8;
+  --color-bg-muted: #f3ebe0;
 
   /* Màu card / surface */
-  --color-card:          #ffffff;
-  --color-border:        #e8ddd0;
-  --color-border-light:  #d9c9b5;
+  --color-card: #ffffff;
+  --color-border: #e8ddd0;
+  --color-border-light: #d9c9b5;
 
   /* Màu chữ */
-  --color-text:          #2c1a0e;
-  --color-text-muted:    #8d7c68;
-  --color-text-light:    #6f5a3f;
+  --color-text: #2c1a0e;
+  --color-text-muted: #8d7c68;
+  --color-text-light: #6f5a3f;
 
   /* Font */
-  --font-body:   Arial, Helvetica, sans-serif;
-  --font-serif:  'Playfair Display', Georgia, 'Times New Roman', serif;
+  --text-xs: 12px;
+  --text-sm: 13px;
+  --text-base: 15px;
+  --text-md: 17px;
+  --text-lg: 20px;
+  --text-xl: 28px;
+  --text-2xl: 36px;
+  --text-3xl: clamp(42px, 4.5vw, 56px);
+  --font-body: Arial, Helvetica, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
 
   /* Bo góc */
-  --radius-sm:   8px;
-  --radius-md:   14px;
-  --radius-lg:   20px;
-  --radius-xl:   28px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
   --radius-full: 999px;
 
   /* Đổ bóng */
-  --shadow-sm:   0 4px 12px rgba(0,0,0,0.06);
-  --shadow-md:   0 8px 24px rgba(0,0,0,0.10);
-  --shadow-lg:   0 18px 48px rgba(0,0,0,0.12);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.10);
+  --shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.12);
 
   /* Chiều cao header */
-  --header-h:    82px;
+  --header-h: 82px;
 
   /* Transition mặc định */
-  --transition:  0.25s ease;
+  --transition: 0.25s ease;
 }

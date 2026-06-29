@@ -58,7 +58,7 @@ body.auth-page {
 
 .auth-card h1 {
   text-align: center;
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-serif);
   font-size: 26px;
   font-weight: 700;
   color: #1a1a1a;
@@ -176,7 +176,6 @@ body.auth-page {
     border-color 0.2s,
     box-shadow 0.2s;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
 }
 
 .auth-input::placeholder {
@@ -243,12 +242,12 @@ body.auth-page {
   position: relative;
 }
 
-.checkbox-input:checked + .checkbox-custom {
+.checkbox-input:checked+.checkbox-custom {
   background: #1e4d35;
   border-color: #1e4d35;
 }
 
-.checkbox-input:checked + .checkbox-custom::after {
+.checkbox-input:checked+.checkbox-custom::after {
   content: "";
   position: absolute;
   left: 4px;
@@ -285,7 +284,6 @@ body.auth-page {
   transition:
     background 0.2s,
     transform 0.1s;
-  font-family: "Inter", sans-serif;
 }
 
 .auth-submit-btn:hover {
@@ -389,7 +387,7 @@ body.auth-page {
   font-family: "Inter", sans-serif;
 }
 
-.gender-input:checked + .gender-label {
+.gender-input:checked+.gender-label {
   border-color: #1e4d35;
   background: #edf4ef;
   color: #1e4d35;
