@@ -1,0 +1,336 @@
+<?php
+/**
+ * Trang chủ - YourLife Coffee
+ */
+
+// Danh sách sản phẩm bán chạy (có thể thay bằng truy vấn CSDL sau này)
+$bestSellerProducts = [
+    [
+        'name'     => 'Trà Sữa Trân Châu Đen',
+        'price'    => 52000,
+        'image'    => './assets/images/menu/trasuatranchauden.avif',
+        'category' => 'Trà Sữa',
+        'desc'     => 'Trà sữa đậm đà với trân châu đen dẻo ngon, hương vị ngọt ngào khó quên.',
+        'sold'     => '2.100',
+        'badge'    => ['type' => 'ban-chay', 'label' => 'Bán chạy'],
+    ],
+    [
+        'name'     => 'Trà Sữa Matcha Trân Châu',
+        'price'    => 59000,
+        'image'    => './assets/images/menu/trasua.avif',
+        'category' => 'Trà Sữa',
+        'desc'     => 'Matcha cao cấp pha sữa tươi cùng trân châu đen thơm dẻo, béo ngậy.',
+        'sold'     => '1.800',
+        'badge'    => ['type' => 'ban-chay', 'label' => 'Bán chạy'],
+    ],
+    [
+        'name'     => 'Trà Sữa Khoai Môn',
+        'price'    => 55000,
+        'image'    => './assets/images/menu/truasuakhoaimon.avif',
+        'category' => 'Trà Sữa',
+        'desc'     => 'Vị khoai môn béo thơm hoà quyện trong trà sữa mịn mượt, tuyệt vời.',
+        'sold'     => '1.500',
+        'badge'    => null,
+    ],
+    [
+        'name'     => 'Cà Phê Sữa Đá',
+        'price'    => 39000,
+        'image'    => './assets/images/menu/cafesuada.avif',
+        'category' => 'Cà Phê',
+        'desc'     => 'Cà phê phin truyền thống kết hợp sữa đặc thơm ngon, đậm đà hương vị Việt.',
+        'sold'     => '1.250',
+        'badge'    => ['type' => 'ban-chay', 'label' => 'Bán chạy'],
+    ],
+    [
+        'name'     => 'Trà Đào Cam Sả',
+        'price'    => 45000,
+        'image'    => './assets/images/menu/tradaocamxa.avif',
+        'category' => 'Trà',
+        'desc'     => 'Hương vị thanh mát với đào tươi, cam và sả kết hợp hoàn hảo.',
+        'sold'     => '980',
+        'badge'    => ['type' => 'moi', 'label' => 'Mới'],
+    ],
+    [
+        'name'     => 'Bạc Xỉu',
+        'price'    => 35000,
+        'image'    => './assets/images/menu/bacxiu.avif',
+        'category' => 'Cà Phê',
+        'desc'     => 'Cà phê nhẹ nhàng với lượng sữa nhiều hơn, thơm béo và dịu ngọt.',
+        'sold'     => '870',
+        'badge'    => null,
+    ],
+    [
+        'name'     => 'Trà Sữa Dứa Thơm',
+        'price'    => 49000,
+        'image'    => './assets/images/menu/trasua.avif',
+        'category' => 'Trà Sữa',
+        'desc'     => 'Hương dứa nhiệt đới tươi mát kết hợp trà sữa béo ngậy, khó cưỡng.',
+        'sold'     => '760',
+        'badge'    => null,
+    ],
+    [
+        'name'     => 'Trà Ô Long Sữa',
+        'price'    => 53000,
+        'image'    => './assets/images/menu/trasuatranchauden.avif',
+        'category' => 'Trà Sữa',
+        'desc'     => 'Ô long thượng hạng pha cùng sữa tươi, hậu vị ngọt thanh đặc trưng.',
+        'sold'     => '640',
+        'badge'    => null,
+    ],
+];
+
+function formatPrice(int $price): string
+{
+    return number_format($price, 0, ',', '.') . 'đ';
+}
+?>
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/pages/home.css" />
+    <title>YourLife Coffee</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="./index.php" target="_self" class="header-brand">
+        <div class="brand-icon">
+          <img src="./assets/images/trangchu/logo.jpg" alt="YourLife Coffee" />
+        </div>
+        <span class="brand-name">YourLife</span>
+      </a>
+      <nav class="navbar">
+        <ul class="nav">
+          <li class="nav-item"><a href="./index.php#top" class="nav-link active">Trang chủ</a></li>
+          <li class="nav-item"><a href="./pages/menu.html" class="nav-link">Menu</a></li>
+          <li class="nav-item"><a href="./pages/khuyenmai.html" class="nav-link">Khuyến mãi</a></li>
+          <li class="nav-item"><a href="./pages/lichsu.html" class="nav-link">Lịch sử</a></li>
+          <li class="nav-item"><a href="./pages/lienhe.html" class="nav-link">Liên hệ</a></li>
+        </ul>
+      </nav>
+      <div class="header-action">
+        <a href="./pages/cart.html" class="cart">
+          <i class="icon-cart"></i>
+          <span class="cart-count hidden" id="cartCount">0</span>
+        </a>
+        <button class="account">
+          <i class="icon-user"></i>
+          <span>Tài khoản</span>
+          <i class="icon-char"></i>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="first-section">
+        <div class="first-overlay">
+          <div class="first-container">
+            <div class="first-badge">
+              <i class="icon-cup"></i>
+              <span>Thương hiệu cà phê top đầu Việt Nam</span>
+            </div>
+            <h1 class="first-title">Hương vị <br /><span>cà phê đích thực</span></h1>
+            <p class="first-desc">
+              YourLife - mang đến những tách cà phê chất lượng cao cùng không gian thư giãn tuyệt vời.
+            </p>
+            <div class="first-action">
+              <a href="./pages/menu.html" class="btn-primary">Xem menu <i class="icon-arrow-right"></i></a>
+              <a href="./pages/khuyenmai.html" class="btn-outline">Khuyến mãi hôm nay</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="stats">
+        <div class="stat-container">
+          <div class="stat-item"><h3 class="stat-title">Tự hào</h3><p class="stat-info">Sản phẩm Việt</p></div>
+          <div class="stat-item"><h3 class="stat-title">100%</h3><p class="stat-info">Nguyên liệu tự nhiên</p></div>
+        </div>
+      </section>
+      <section class="second-section">
+        <div class="second-container">
+          <div class="second-header">
+            <h2 class="second-title">Danh mục nổi bật</h2>
+            <p class="second-decs">Khám phá các dòng sản phẩm đặc trưng của YourLife</p>
+          </div>
+          <div class="second-category">
+            <a href="./pages/menu.html" class="category-card">
+              <img src="./assets/images/trangchu/caphe.jpg" alt="Cà phê" class="category-image" />
+              <div class="category-overlay">
+                <div class="category-content">
+                  <span class="category-icon">☕</span>
+                  <h3 class="category-name">Cà phê</h3>
+                  <p class="category-count">4 sản phẩm</p>
+                </div>
+              </div>
+            </a>
+            <a href="./pages/menu.html" class="category-card">
+              <img src="./assets/images/trangchu/tra.jpg" alt="Trà" class="category-image" />
+              <div class="category-overlay">
+                <div class="category-content">
+                  <span class="category-icon">🍵</span>
+                  <h3 class="category-name">Trà</h3>
+                  <p class="category-count">4 sản phẩm</p>
+                </div>
+              </div>
+            </a>
+            <a href="./pages/menu.html" class="category-card">
+              <img src="./assets/images/trangchu/trasua.jpg" alt="Trà sữa" class="category-image" />
+              <div class="category-overlay">
+                <div class="category-content">
+                  <span class="category-icon">🧋</span>
+                  <h3 class="category-name">Trà sữa</h3>
+                  <p class="category-count">4 sản phẩm</p>
+                </div>
+              </div>
+            </a>
+            <a href="./pages/menu.html" class="category-card">
+              <img src="./assets/images/trangchu/banh.jpg" alt="Bánh" class="category-image" />
+              <div class="category-overlay">
+                <div class="category-content">
+                  <span class="category-icon">🥐</span>
+                  <h3 class="category-name">Bánh</h3>
+                  <p class="category-count">4 sản phẩm</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- SẢN PHẨM BÁN CHẠY -->
+      <section class="third-section">
+        <div class="third-container">
+          <div class="third-header">
+            <div class="third-header-left">
+              <h2 class="third-title">Sản phẩm bán chạy</h2>
+              <p class="third-desc">Được yêu thích nhất trong tuần</p>
+            </div>
+            <a href="./pages/menu.html" class="third-view-all">Xem tất cả</a>
+          </div>
+          <div class="product-grid">
+            <?php foreach ($bestSellerProducts as $product): ?>
+            <div class="product-card" data-name="<?= htmlspecialchars($product['name']) ?>" data-price="<?= (int) $product['price'] ?>">
+              <div class="product-image-wrap">
+                <img src="<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['name']) ?>" />
+                <?php if ($product['badge']): ?>
+                <span class="product-badge <?= htmlspecialchars($product['badge']['type']) ?>">
+                  <?= htmlspecialchars($product['badge']['label']) ?>
+                </span>
+                <?php endif; ?>
+              </div>
+              <div class="product-body">
+                <span class="product-category"><?= htmlspecialchars($product['category']) ?></span>
+                <h3 class="product-name"><?= htmlspecialchars($product['name']) ?></h3>
+                <p class="product-desc"><?= htmlspecialchars($product['desc']) ?></p>
+                <div class="product-footer">
+                  <span class="product-price"><?= formatPrice($product['price']) ?></span>
+                  <button class="btn-add">+ Thêm</button>
+                </div>
+                <p class="product-sold">Đã bán: <?= htmlspecialchars($product['sold']) ?></p>
+              </div>
+            </div>
+            <?php endforeach; ?>
+          </div>
+        </div>
+      </section>
+
+      <!-- KHUYẾN MÃI -->
+      <section class="promo-section">
+        <div class="promo-container">
+          <div class="promo-card green">
+            <img src="./assets/images/trangchu/tra.jpg" alt="" class="promo-bg" />
+            <div class="promo-overlay"></div>
+            <div class="promo-content">
+              <p class="promo-tag">Chỉ hôm nay</p>
+              <h3 class="promo-title">Mua 2 Cà Phê<br />Tặng 1 Miễn Phí</h3>
+              <a href="" class="btn-promo-primary">Đặt ngay</a>
+            </div>
+          </div>
+          <div class="promo-card brown">
+            <img src="./assets/images/trangchu/caphe.jpg" alt="" class="promo-bg" />
+            <div class="promo-overlay"></div>
+            <div class="promo-content">
+              <p class="promo-tag">Ưu đãi mùa hè</p>
+              <h3 class="promo-title">Giảm 30% Trà Sữa<br />Khi Đặt Online</h3>
+              <a href="" class="btn-promo-outline">Xem ưu đãi</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CÂU CHUYỆN CỦA CHÚNG TÔI -->
+      <section class="story-section">
+        <div class="story-container">
+          <div class="story-content">
+            <p class="story-label">Câu chuyện của chúng tôi</p>
+            <h2 class="story-title">Hơn 55 năm<br />truyền thống Việt</h2>
+            <p class="story-text">
+              YourLife Coffee được thành lập tại vùng đất cao nguyên trù phú — trái tim của vùng trà và cà phê Việt Nam. Từ một cơ sở sản xuất nhỏ, chúng tôi đã trở thành thương hiệu được hàng triệu người Việt yêu thích.
+            </p>
+            <p class="story-text">
+              Mỗi sản phẩm của YourLife đều được chọn lọc từ những nguyên liệu tốt nhất, qua quy trình chế biến nghiêm ngặt để mang lại hương vị đích thực và thuần khiết nhất.
+            </p>
+            <a href="" class="btn-story">Tìm hiểu thêm</a>
+          </div>
+          <div class="story-image-wrap">
+            <img src="./assets/images/trangchu/caphe.jpg" alt="Câu chuyện YourLife Coffee" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <div class="footer-brand-icon">
+            <img src="./assets/images/trangchu/logo.jpg" alt="YourLife" />
+          </div>
+          <span class="footer-brand-name">YourLife</span>
+        </div>
+        <p class="footer-tagline">Mang đến hương vị cà phê &amp; trà chất lượng cao nhất Việt Nam.</p>
+      </div>
+
+      <div class="footer-link">
+        <h3 class="footer-heading">Liên kết nhanh</h3>
+        <nav>
+          <ul>
+            <li><a href="./index.php">Trang chủ</a></li>
+            <li><a href="./pages/menu.html">Menu</a></li>
+            <li><a href="./pages/khuyenmai.html">Khuyến mãi</a></li>
+            <li><a href="./pages/lichsu.html">Lịch sử</a></li>
+            <li><a href="./pages/lienhe.html">Liên hệ</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-info">
+        <h3 class="footer-heading">Thông tin cửa hàng</h3>
+        <div class="footer-info-list">
+          <div class="footer-info-item"><span class="fi-icon">📍</span><span>123 Nguyễn Huệ, Q.1, TP.HCM</span></div>
+          <div class="footer-info-item"><span class="fi-icon">📞</span><span>1800 6996</span></div>
+          <div class="footer-info-item"><span class="fi-icon">✉️</span><span>info@yourlife.com.vn</span></div>
+          <div class="footer-info-item"><span class="fi-icon">🕐</span><span>07:00 – 22:00 hàng ngày</span></div>
+        </div>
+      </div>
+
+      <div class="footer-contact">
+        <h3 class="footer-heading">Kết nối với chúng tôi</h3>
+        <p class="footer-contact-desc">Theo dõi YourLife trên mạng xã hội để nhận thông tin khuyến mãi mới nhất.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/?locale=vi_VN" target="_blank" class="social-btn">Facebook</a>
+          <a href="https://id.zalo.me/account?continue=https%3A%2F%2Fchat.zalo.me%2F" target="_blank" class="social-btn">Zalo</a>
+          <a href="https://www.instagram.com/" target="_blank" class="social-btn">Instagram</a>
+        </div>
+        <a href="" class="footer-admin">Trang quản trị</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">© <?= date('Y') ?> YourLife. Tất cả quyền được bảo lưu.</p>
+      </div>
+    </footer>
+    <script src="./assets/js/account-dropdown.js"></script>
+    <script src="./assets/js/utils/helper.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
