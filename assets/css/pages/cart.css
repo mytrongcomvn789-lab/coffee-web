@@ -74,21 +74,18 @@
   box-shadow: 0 10px 22px rgba(30, 77, 58, 0.12);
 }
 
-.cart-items {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+.cart-item{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    background:#fff;
+    padding:18px;
+    border-radius:14px;
 }
-.cart-item {
-  display: flex;
-  gap: 18px;
-  align-items: center;
-  background: var(--color-card);
-  padding: 18px;
-  border-radius: 14px;
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
-  overflow: hidden;
+.cart-items{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;     
 }
 .cart-item img {
   width: 100px;
@@ -96,12 +93,10 @@
   object-fit: cover;
   border-radius: 12px;
 }
-.cart-item-meta {
-  min-width: 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.cart-item-meta{
+    flex:1;
 }
+
 .cart-item-meta h4 {
   font-size: 18px;
   margin: 0 0 6px;
@@ -110,11 +105,8 @@
   color: var(--color-primary-dark);
   font-weight: 800;
 }
-.cart-item-actions {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: 20px;
+.cart-item-actions{
+    margin-left:auto;
 }
 
 .cart-qty-controls {
@@ -125,6 +117,7 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-full);
   padding: 0 10px;
+  margin-left: -30px;
 }
 .cart-qty-btn {
   width: 30px;
@@ -142,25 +135,23 @@
   text-align: center;
   font-weight: 800;
 }
-.cart-remove {
-  display: inline-flex !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 14px;
-  border: 1px solid #fda4af;
-  border-radius: 999px;
-  background: #fff1f2 !important;
-  color: #e11d48 !important;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-  min-width: 60px;
-  height: 38px;
+.cart-remove-form{
+    margin-left:15px;
 }
 
+.cart-remove{
+    width:70px;
+    height:38px;
+
+    border-radius:20px;
+    border:1px solid #ff8ca0;
+
+    background:#fff1f2;
+    color:#e11d48;
+
+    font-weight:bold;
+    cursor:pointer;
+}
 .cart-remove:hover {
   background: #ffe4e6 !important;
   border-color: #fb7185;
