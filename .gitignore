@@ -1,0 +1,19 @@
+# XAMPP / MySQL local data
+mysql/
+xampp/
+*.ibd
+*.frm
+*.MYD
+*.MYI
+ibdata1
+ib_logfile*
+aria_log*
+
+# Local config
+.env
+config.local.php
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
